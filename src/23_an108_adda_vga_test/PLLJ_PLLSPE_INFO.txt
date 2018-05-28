@@ -1,0 +1,10 @@
+PLL_Name	adda_pll:adda_pll_m0|altpll:altpll_component|adda_pll_altpll:auto_generated|pll1
+PLLJITTER	31
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	video_pll:video_pll_m0|altpll:altpll_component|video_pll_altpll:auto_generated|pll1
+PLLJITTER	29
+PLLSPEmax	84
+PLLSPEmin	-53
+

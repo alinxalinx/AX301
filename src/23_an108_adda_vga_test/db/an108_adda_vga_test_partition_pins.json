@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ad9708_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9708_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_hs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_vs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9280_data[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

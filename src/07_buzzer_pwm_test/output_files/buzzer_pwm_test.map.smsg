@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at buzzer_pwm_test.v(34): object "buzzer" differs only in case from object "BUZZER" in the same scope File: D:/intel_project/AX301/demo/07_buzzer_pwm_test/src/buzzer_pwm_test.v Line: 34

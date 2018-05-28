@@ -1,0 +1,56 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\AX301\02_demo\01_led_test\sim
+T_opt
+V28i0JYk4`Qj83OccTZ`]m1
+Z1 04 11 4 work led_test_tb fast 0
+=1-1c872c479142-599d75f0-3dc-12a0
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z3 OL;O;10.1c;51
+Z4 dD:\AX301\02_demo\01_led_test\sim
+T_opt1
+VJ2>@zcgSgmfnQ[05=7_543
+R1
+=1-001d43f11e26-5abb5fca-74-32e4
+R2
+n@_opt1
+R3
+vled_test
+!s100 lT=zXFQOGm]olGNE84cEh1
+I2JL>jJG5oQ28KL@gBcHS00
+VQ1eTR5_5BbOzzbJKi0fN]2
+Z5 dD:\intel_project\AX301\CD\01_学习教程之例程篇\demo\01_led_test\sim
+w1501121932
+8../led_test.v
+F../led_test.v
+L0 31
+Z6 OL;L;10.1c;51
+r1
+31
+!s90 -reportprogress|300|../led_test.v|
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s85 0
+!s108 1522229193.552000
+!s107 ../led_test.v|
+vled_test_tb
+!s100 3W<A9A9;RZEoNd_S_C2zH2
+IRkbf9`zzgjoDL9iPMZDXW2
+ViJ]K<XJJjdnLO;MV]A>NX1
+R5
+w1500957175
+8led_test_tb.v
+Fled_test_tb.v
+L0 2
+R6
+r1
+31
+!s90 -reportprogress|300|led_test_tb.v|
+R7
+!s108 1522229193.330000
+!s107 led_test_tb.v|
+!i10b 1
+!s85 0

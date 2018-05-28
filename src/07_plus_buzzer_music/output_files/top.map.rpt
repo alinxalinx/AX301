@@ -1,0 +1,823 @@
+Analysis & Synthesis report for top
+Thu Mar 29 17:53:42 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |music_top|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for music_rom:hz_rom|altsyncram:altsyncram_component|altsyncram_hka1:auto_generated
+ 15. Source assignments for music_time_rom:time_rom|altsyncram:altsyncram_component|altsyncram_uqa1:auto_generated
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |music_top
+ 17. Parameter Settings for User Entity Instance: ax_debounce:ax_debounce_a0
+ 18. Parameter Settings for User Entity Instance: music_hz:hz0
+ 19. Parameter Settings for User Entity Instance: music_rom:hz_rom|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: music_time_rom:time_rom|altsyncram:altsyncram_component
+ 21. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. lpm_mult Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "ax_debounce:ax_debounce_a0"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Mar 29 17:53:42 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; music_top                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 376                                         ;
+;     Total combinational functions  ; 372                                         ;
+;     Dedicated logic registers      ; 154                                         ;
+; Total registers                    ; 154                                         ;
+; Total pins                         ; 4                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                                      ; music_top          ; top                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
+; src/ax_debounce.v                ; yes             ; User Verilog HDL File                  ; D:/intel_project/AX301/buzzer_audio/src/ax_debounce.v                          ;         ;
+; src/ipcore/music_time_rom.v      ; yes             ; User Wizard-Generated File             ; D:/intel_project/AX301/buzzer_audio/src/ipcore/music_time_rom.v                ;         ;
+; src/ipcore/music_rom.v           ; yes             ; User Wizard-Generated File             ; D:/intel_project/AX301/buzzer_audio/src/ipcore/music_rom.v                     ;         ;
+; src/music_top.v                  ; yes             ; User Verilog HDL File                  ; D:/intel_project/AX301/buzzer_audio/src/music_top.v                            ;         ;
+; src/music_hz.v                   ; yes             ; User Verilog HDL File                  ; D:/intel_project/AX301/buzzer_audio/src/music_hz.v                             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_hka1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/intel_project/AX301/buzzer_audio/db/altsyncram_hka1.tdf                     ;         ;
+; ../src/ipcore/music_hz.mif       ; yes             ; Auto-Found Memory Initialization File  ; D:/intel_project/AX301/buzzer_audio/src/ipcore/music_hz.mif                    ;         ;
+; db/altsyncram_uqa1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/intel_project/AX301/buzzer_audio/db/altsyncram_uqa1.tdf                     ;         ;
+; ../src/ipcore/music_time.mif     ; yes             ; Auto-Found Memory Initialization File  ; D:/intel_project/AX301/buzzer_audio/src/ipcore/music_time.mif                  ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_rgh.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/intel_project/AX301/buzzer_audio/db/add_sub_rgh.tdf                         ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 376       ;
+;                                             ;           ;
+; Total combinational functions               ; 372       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 135       ;
+;     -- 3 input functions                    ; 85        ;
+;     -- <=2 input functions                  ; 152       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 208       ;
+;     -- arithmetic mode                      ; 164       ;
+;                                             ;           ;
+; Total registers                             ; 154       ;
+;     -- Dedicated logic registers            ; 154       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 4         ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 170       ;
+; Total fan-out                               ; 1828      ;
+; Average fan-out                             ; 3.32      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                       ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |music_top                                ; 372 (201)           ; 154 (117)                 ; 8192        ; 0            ; 0       ; 0         ; 4    ; 0            ; |music_top                                                                                        ; music_top       ; work         ;
+;    |ax_debounce:ax_debounce_a0|           ; 77 (77)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|ax_debounce:ax_debounce_a0                                                             ; ax_debounce     ; work         ;
+;    |lpm_mult:Mult0|                       ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|lpm_mult:Mult0                                                                         ; lpm_mult        ; work         ;
+;       |multcore:mult_core|                ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|lpm_mult:Mult0|multcore:mult_core                                                      ; multcore        ; work         ;
+;    |music_hz:hz0|                         ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_hz:hz0                                                                           ; music_hz        ; work         ;
+;    |music_rom:hz_rom|                     ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_rom:hz_rom                                                                       ; music_rom       ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_rom:hz_rom|altsyncram:altsyncram_component                                       ; altsyncram      ; work         ;
+;          |altsyncram_hka1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_rom:hz_rom|altsyncram:altsyncram_component|altsyncram_hka1:auto_generated        ; altsyncram_hka1 ; work         ;
+;    |music_time_rom:time_rom|              ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_time_rom:time_rom                                                                ; music_time_rom  ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_time_rom:time_rom|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_uqa1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_top|music_time_rom:time_rom|altsyncram:altsyncram_component|altsyncram_uqa1:auto_generated ; altsyncram_uqa1 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+; Name                                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                          ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+; music_rom:hz_rom|altsyncram:altsyncram_component|altsyncram_hka1:auto_generated|ALTSYNCRAM        ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; ../src/ipcore/music_hz.mif   ;
+; music_time_rom:time_rom|altsyncram:altsyncram_component|altsyncram_uqa1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; ../src/ipcore/music_time.mif ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------+
+; State Machine - |music_top|state                                             ;
++-----------------+----------------+-----------------+------------+------------+
+; Name            ; state.PLAY_END ; state.PLAY_WAIT ; state.PLAY ; state.IDLE ;
++-----------------+----------------+-----------------+------------+------------+
+; state.IDLE      ; 0              ; 0               ; 0          ; 0          ;
+; state.PLAY      ; 0              ; 0               ; 1          ; 1          ;
+; state.PLAY_WAIT ; 0              ; 1               ; 0          ; 1          ;
+; state.PLAY_END  ; 1              ; 0               ; 0          ; 1          ;
++-----------------+----------------+-----------------+------------+------------+
+
+
++--------------------------------------------------------------------+
+; Registers Removed During Synthesis                                 ;
++---------------------------------------+----------------------------+
+; Register name                         ; Reason for Removal         ;
++---------------------------------------+----------------------------+
+; music_time[0]                         ; Merged with music_time[1]  ;
+; music_time[1]                         ; Merged with music_time[2]  ;
+; music_time[2]                         ; Merged with music_time[3]  ;
+; state~4                               ; Lost fanout                ;
+; state~5                               ; Lost fanout                ;
+; music_time[3]                         ; Merged with music_time[31] ;
+; Total Number of Removed Registers = 6 ;                            ;
++---------------------------------------+----------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 154   ;
+; Number of registers using Synchronous Clear  ; 84    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 154   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; music_time[9]                            ; 1       ;
+; music_time[10]                           ; 1       ;
+; music_time[11]                           ; 1       ;
+; music_time[12]                           ; 1       ;
+; music_time[13]                           ; 1       ;
+; music_time[14]                           ; 1       ;
+; music_time[15]                           ; 1       ;
+; music_time[16]                           ; 1       ;
+; music_time[17]                           ; 1       ;
+; music_time[18]                           ; 1       ;
+; music_time[19]                           ; 1       ;
+; music_time[20]                           ; 1       ;
+; music_time[21]                           ; 1       ;
+; music_time[22]                           ; 1       ;
+; music_time[23]                           ; 1       ;
+; music_time[24]                           ; 1       ;
+; music_time[25]                           ; 1       ;
+; music_time[26]                           ; 1       ;
+; music_time[27]                           ; 1       ;
+; music_time[28]                           ; 1       ;
+; music_time[29]                           ; 1       ;
+; music_time[30]                           ; 1       ;
+; buzzer~reg0                              ; 2       ;
+; music_time[31]                           ; 3       ;
+; music_time[4]                            ; 1       ;
+; music_time[5]                            ; 1       ;
+; music_time[6]                            ; 1       ;
+; music_time[7]                            ; 1       ;
+; music_time[8]                            ; 1       ;
+; ax_debounce:ax_debounce_a0|button_out    ; 3       ;
+; ax_debounce:ax_debounce_a0|button_out_d0 ; 1       ;
+; Total number of inverted registers = 31  ;         ;
++------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |music_top|music_cnt[4]    ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |music_top|hz_cnt[19]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for music_rom:hz_rom|altsyncram:altsyncram_component|altsyncram_hka1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Source assignments for music_time_rom:time_rom|altsyncram:altsyncram_component|altsyncram_uqa1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |music_top ;
++----------------+----------------------------------+-----------------------+
+; Parameter Name ; Value                            ; Type                  ;
++----------------+----------------------------------+-----------------------+
+; CLK_FRE        ; 50                               ; Signed Integer        ;
+; music_len      ; 00000000000000000000000001001110 ; Unsigned Binary       ;
+; IDLE           ; 00                               ; Unsigned Binary       ;
+; PLAY           ; 01                               ; Unsigned Binary       ;
+; PLAY_WAIT      ; 10                               ; Unsigned Binary       ;
+; PLAY_END       ; 11                               ; Unsigned Binary       ;
++----------------+----------------------------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ax_debounce:ax_debounce_a0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 32    ; Signed Integer                                 ;
+; FREQ           ; 50    ; Signed Integer                                 ;
+; MAX_TIME       ; 20    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_hz:hz0 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; CLK_FRE        ; 50    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_rom:hz_rom|altsyncram:altsyncram_component ;
++------------------------------------+----------------------------+-----------------------------+
+; Parameter Name                     ; Value                      ; Type                        ;
++------------------------------------+----------------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                          ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                         ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                        ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                         ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                        ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                          ; Untyped                     ;
+; OPERATION_MODE                     ; ROM                        ; Untyped                     ;
+; WIDTH_A                            ; 8                          ; Signed Integer              ;
+; WIDTHAD_A                          ; 9                          ; Signed Integer              ;
+; NUMWORDS_A                         ; 512                        ; Signed Integer              ;
+; OUTDATA_REG_A                      ; CLOCK0                     ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                       ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                       ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                       ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                       ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                       ; Untyped                     ;
+; WIDTH_B                            ; 1                          ; Untyped                     ;
+; WIDTHAD_B                          ; 1                          ; Untyped                     ;
+; NUMWORDS_B                         ; 1                          ; Untyped                     ;
+; INDATA_REG_B                       ; CLOCK1                     ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                     ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1                     ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK1                     ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED               ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1                     ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                       ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                       ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                       ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                       ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                       ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                       ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                          ; Signed Integer              ;
+; WIDTH_BYTEENA_B                    ; 1                          ; Untyped                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                       ; Untyped                     ;
+; BYTE_SIZE                          ; 8                          ; Untyped                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                  ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ       ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ       ; Untyped                     ;
+; INIT_FILE                          ; ../src/ipcore/music_hz.mif ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A                     ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                          ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                     ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                     ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                     ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                     ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN            ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN            ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                      ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                      ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                          ; Untyped                     ;
+; DEVICE_FAMILY                      ; Cyclone IV E               ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_hka1            ; Untyped                     ;
++------------------------------------+----------------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_time_rom:time_rom|altsyncram:altsyncram_component ;
++------------------------------------+------------------------------+----------------------------------+
+; Parameter Name                     ; Value                        ; Type                             ;
++------------------------------------+------------------------------+----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                            ; Untyped                          ;
+; AUTO_CARRY_CHAINS                  ; ON                           ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                          ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                ; ON                           ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                          ; IGNORE_CASCADE                   ;
+; WIDTH_BYTEENA                      ; 1                            ; Untyped                          ;
+; OPERATION_MODE                     ; ROM                          ; Untyped                          ;
+; WIDTH_A                            ; 8                            ; Signed Integer                   ;
+; WIDTHAD_A                          ; 9                            ; Signed Integer                   ;
+; NUMWORDS_A                         ; 512                          ; Signed Integer                   ;
+; OUTDATA_REG_A                      ; CLOCK0                       ; Untyped                          ;
+; ADDRESS_ACLR_A                     ; NONE                         ; Untyped                          ;
+; OUTDATA_ACLR_A                     ; NONE                         ; Untyped                          ;
+; WRCONTROL_ACLR_A                   ; NONE                         ; Untyped                          ;
+; INDATA_ACLR_A                      ; NONE                         ; Untyped                          ;
+; BYTEENA_ACLR_A                     ; NONE                         ; Untyped                          ;
+; WIDTH_B                            ; 1                            ; Untyped                          ;
+; WIDTHAD_B                          ; 1                            ; Untyped                          ;
+; NUMWORDS_B                         ; 1                            ; Untyped                          ;
+; INDATA_REG_B                       ; CLOCK1                       ; Untyped                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                       ; Untyped                          ;
+; RDCONTROL_REG_B                    ; CLOCK1                       ; Untyped                          ;
+; ADDRESS_REG_B                      ; CLOCK1                       ; Untyped                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED                 ; Untyped                          ;
+; BYTEENA_REG_B                      ; CLOCK1                       ; Untyped                          ;
+; INDATA_ACLR_B                      ; NONE                         ; Untyped                          ;
+; WRCONTROL_ACLR_B                   ; NONE                         ; Untyped                          ;
+; ADDRESS_ACLR_B                     ; NONE                         ; Untyped                          ;
+; OUTDATA_ACLR_B                     ; NONE                         ; Untyped                          ;
+; RDCONTROL_ACLR_B                   ; NONE                         ; Untyped                          ;
+; BYTEENA_ACLR_B                     ; NONE                         ; Untyped                          ;
+; WIDTH_BYTEENA_A                    ; 1                            ; Signed Integer                   ;
+; WIDTH_BYTEENA_B                    ; 1                            ; Untyped                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                         ; Untyped                          ;
+; BYTE_SIZE                          ; 8                            ; Untyped                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                    ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ         ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ         ; Untyped                          ;
+; INIT_FILE                          ; ../src/ipcore/music_time.mif ; Untyped                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                       ; Untyped                          ;
+; MAXIMUM_DEPTH                      ; 0                            ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                       ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                       ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                       ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                       ; Untyped                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN              ; Untyped                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN              ; Untyped                          ;
+; ENABLE_ECC                         ; FALSE                        ; Untyped                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                        ; Untyped                          ;
+; WIDTH_ECCSTATUS                    ; 3                            ; Untyped                          ;
+; DEVICE_FAMILY                      ; Cyclone IV E                 ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_uqa1              ; Untyped                          ;
++------------------------------------+------------------------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8            ; Untyped             ;
+; LPM_WIDTHB                                     ; 23           ; Untyped             ;
+; LPM_WIDTHP                                     ; 31           ; Untyped             ;
+; LPM_WIDTHR                                     ; 31           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                    ;
++-------------------------------------------+---------------------------------------------------------+
+; Name                                      ; Value                                                   ;
++-------------------------------------------+---------------------------------------------------------+
+; Number of entity instances                ; 2                                                       ;
+; Entity Instance                           ; music_rom:hz_rom|altsyncram:altsyncram_component        ;
+;     -- OPERATION_MODE                     ; ROM                                                     ;
+;     -- WIDTH_A                            ; 8                                                       ;
+;     -- NUMWORDS_A                         ; 512                                                     ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                  ;
+;     -- WIDTH_B                            ; 1                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
+; Entity Instance                           ; music_time_rom:time_rom|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                     ;
+;     -- WIDTH_A                            ; 8                                                       ;
+;     -- NUMWORDS_A                         ; 512                                                     ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                  ;
+;     -- WIDTH_B                            ; 1                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
++-------------------------------------------+---------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance         ;
++---------------------------------------+----------------+
+; Name                                  ; Value          ;
++---------------------------------------+----------------+
+; Number of entity instances            ; 1              ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8              ;
+;     -- LPM_WIDTHB                     ; 23             ;
+;     -- LPM_WIDTHP                     ; 31             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES            ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
++---------------------------------------+----------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "ax_debounce:ax_debounce_a0"      ;
++----------------+--------+----------+------------------------+
+; Port           ; Type   ; Severity ; Details                ;
++----------------+--------+----------+------------------------+
+; button_posedge ; Output ; Info     ; Explicitly unconnected ;
+; button_out     ; Output ; Info     ; Explicitly unconnected ;
++----------------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 154                         ;
+;     CLR               ; 70                          ;
+;     CLR SCLR          ; 52                          ;
+;     ENA CLR SCLR      ; 32                          ;
+; cycloneiii_lcell_comb ; 373                         ;
+;     arith             ; 164                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 116                         ;
+;         3 data inputs ; 47                          ;
+;     normal            ; 209                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 135                         ;
+; cycloneiii_ram_block  ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.80                        ;
+; Average LUT depth     ; 4.29                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Mar 29 17:53:26 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/ax_debounce.v
+    Info (12023): Found entity 1: ax_debounce File: D:/intel_project/AX301/buzzer_audio/src/ax_debounce.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file src/ipcore/music_time_rom.v
+    Info (12023): Found entity 1: music_time_rom File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_time_rom.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file src/ipcore/music_rom.v
+    Info (12023): Found entity 1: music_rom File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_rom.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file src/music_top.v
+    Info (12023): Found entity 1: music_top File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/music_hz.v
+    Info (12023): Found entity 1: music_hz File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 1
+Info (12127): Elaborating entity "music_top" for the top level hierarchy
+Info (12128): Elaborating entity "ax_debounce" for hierarchy "ax_debounce:ax_debounce_a0" File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 72
+Info (12128): Elaborating entity "music_hz" for hierarchy "music_hz:hz0" File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 140
+Warning (10230): Verilog HDL assignment warning at music_hz.v(12): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 12
+Warning (10230): Verilog HDL assignment warning at music_hz.v(13): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 13
+Warning (10230): Verilog HDL assignment warning at music_hz.v(14): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 14
+Warning (10230): Verilog HDL assignment warning at music_hz.v(15): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 15
+Warning (10230): Verilog HDL assignment warning at music_hz.v(16): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 16
+Warning (10230): Verilog HDL assignment warning at music_hz.v(17): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 17
+Warning (10230): Verilog HDL assignment warning at music_hz.v(18): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 18
+Warning (10230): Verilog HDL assignment warning at music_hz.v(19): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 19
+Warning (10230): Verilog HDL assignment warning at music_hz.v(20): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 20
+Warning (10230): Verilog HDL assignment warning at music_hz.v(21): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 21
+Warning (10230): Verilog HDL assignment warning at music_hz.v(22): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 22
+Warning (10230): Verilog HDL assignment warning at music_hz.v(23): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 23
+Warning (10230): Verilog HDL assignment warning at music_hz.v(24): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 24
+Warning (10230): Verilog HDL assignment warning at music_hz.v(25): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 25
+Warning (10230): Verilog HDL assignment warning at music_hz.v(26): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 26
+Warning (10230): Verilog HDL assignment warning at music_hz.v(27): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 27
+Warning (10230): Verilog HDL assignment warning at music_hz.v(28): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 28
+Warning (10230): Verilog HDL assignment warning at music_hz.v(29): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 29
+Warning (10230): Verilog HDL assignment warning at music_hz.v(30): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 30
+Warning (10230): Verilog HDL assignment warning at music_hz.v(31): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 31
+Warning (10230): Verilog HDL assignment warning at music_hz.v(32): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 32
+Warning (10230): Verilog HDL assignment warning at music_hz.v(33): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 33
+Warning (10230): Verilog HDL assignment warning at music_hz.v(34): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 34
+Warning (10230): Verilog HDL assignment warning at music_hz.v(35): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 35
+Warning (10230): Verilog HDL assignment warning at music_hz.v(36): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 36
+Warning (10230): Verilog HDL assignment warning at music_hz.v(37): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 37
+Warning (10230): Verilog HDL assignment warning at music_hz.v(38): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 38
+Warning (10230): Verilog HDL assignment warning at music_hz.v(39): truncated value with size 32 to match size of target (20) File: D:/intel_project/AX301/buzzer_audio/src/music_hz.v Line: 39
+Info (12128): Elaborating entity "music_rom" for hierarchy "music_rom:hz_rom" File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 147
+Info (12128): Elaborating entity "altsyncram" for hierarchy "music_rom:hz_rom|altsyncram:altsyncram_component" File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_rom.v Line: 81
+Info (12130): Elaborated megafunction instantiation "music_rom:hz_rom|altsyncram:altsyncram_component" File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_rom.v Line: 81
+Info (12133): Instantiated megafunction "music_rom:hz_rom|altsyncram:altsyncram_component" with the following parameter: File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_rom.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../src/ipcore/music_hz.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hka1.tdf
+    Info (12023): Found entity 1: altsyncram_hka1 File: D:/intel_project/AX301/buzzer_audio/db/altsyncram_hka1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_hka1" for hierarchy "music_rom:hz_rom|altsyncram:altsyncram_component|altsyncram_hka1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "music_time_rom" for hierarchy "music_time_rom:time_rom" File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 155
+Info (12128): Elaborating entity "altsyncram" for hierarchy "music_time_rom:time_rom|altsyncram:altsyncram_component" File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_time_rom.v Line: 81
+Info (12130): Elaborated megafunction instantiation "music_time_rom:time_rom|altsyncram:altsyncram_component" File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_time_rom.v Line: 81
+Info (12133): Instantiated megafunction "music_time_rom:time_rom|altsyncram:altsyncram_component" with the following parameter: File: D:/intel_project/AX301/buzzer_audio/src/ipcore/music_time_rom.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../src/ipcore/music_time.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uqa1.tdf
+    Info (12023): Found entity 1: altsyncram_uqa1 File: D:/intel_project/AX301/buzzer_audio/db/altsyncram_uqa1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_uqa1" for hierarchy "music_time_rom:time_rom|altsyncram:altsyncram_component|altsyncram_uqa1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 81
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 81
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 81
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "23"
+    Info (12134): Parameter "LPM_WIDTHP" = "31"
+    Info (12134): Parameter "LPM_WIDTHR" = "31"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
+    Info (12023): Found entity 1: add_sub_rgh File: D:/intel_project/AX301/buzzer_audio/db/add_sub_rgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (13000): Registers with preset signals will power-up high File: D:/intel_project/AX301/buzzer_audio/src/music_top.v Line: 7
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 396 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 376 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 672 megabytes
+    Info: Processing ended: Thu Mar 29 17:53:42 2018
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:29
+
+

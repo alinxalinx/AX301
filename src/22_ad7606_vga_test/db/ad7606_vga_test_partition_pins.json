@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ad7606_cs",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_rd",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_reset",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_convstab",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_hs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_vs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_busy",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ad7606_data[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

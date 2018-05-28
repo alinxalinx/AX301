@@ -1,0 +1,35 @@
+
+State Machine - |i2c_eeprom_test|state
+Name state.S_WRITE state.S_WAIT state.S_READ state.S_IDLE 
+state.S_IDLE 0 0 0 0 
+state.S_READ 0 0 1 1 
+state.S_WAIT 0 1 0 1 
+state.S_WRITE 1 0 0 1 
+
+State Machine - |i2c_eeprom_test|i2c_master_top:i2c_master_top_m0|state
+Name state.S_RD_ACK state.S_RD_REG_ADDR1 state.S_WR_REG_ADDR1 state.S_WAIT state.S_WR_STOP state.S_RD_STOP state.S_RD_DATA state.S_RD_DEV_ADDR1 state.S_RD_REG_ADDR state.S_RD_DEV_ADDR0 state.S_WR_ERR_NACK state.S_WR_ACK state.S_WR_DATA state.S_WR_REG_ADDR state.S_WR_DEV_ADDR state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S_WR_DEV_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S_WR_REG_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S_WR_DATA 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S_WR_ACK 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S_WR_ERR_NACK 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S_RD_DEV_ADDR0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S_RD_REG_ADDR 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S_RD_DEV_ADDR1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S_RD_DATA 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S_RD_STOP 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S_WR_STOP 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WR_REG_ADDR1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD_REG_ADDR1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD_ACK 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |i2c_eeprom_test|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 

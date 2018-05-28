@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Mar 20 16:44:47 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : ad9226_vga_test
+Top-level Entity Name : top
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total logic elements : 408 / 6,272 ( 7 % )
+    Total combinational functions : 340 / 6,272 ( 5 % )
+    Dedicated logic registers : 270 / 6,272 ( 4 % )
+Total registers : 270
+Total pins : 46 / 180 ( 26 % )
+Total virtual pins : 0
+Total memory bits : 16,420 / 276,480 ( 6 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

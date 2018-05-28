@@ -1,0 +1,1280 @@
+Analysis & Synthesis report for sd_card_test
+Tue Mar 20 15:31:54 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|state
+ 10. State Machine - |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state
+ 11. State Machine - |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state
+ 12. State Machine - |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state
+ 13. State Machine - |top|i2c_config:i2c_config_m0|state
+ 14. State Machine - |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state
+ 15. State Machine - |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|c_state
+ 16. Registers Protected by Synthesis
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Inverted Register Statistics
+ 21. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 22. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated
+ 23. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_t57:rdptr_g1p
+ 24. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_ojc:wrptr_g1p
+ 25. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|altsyncram_kj31:fifo_ram
+ 26. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:rs_brp
+ 27. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:rs_bwp
+ 28. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp
+ 29. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13
+ 30. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:ws_brp
+ 31. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_pe9:ws_bwp
+ 32. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp
+ 33. Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17
+ 34. Parameter Settings for User Entity Instance: i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller
+ 35. Parameter Settings for User Entity Instance: i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller
+ 36. Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0
+ 37. Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component
+ 38. Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0
+ 39. Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0
+ 40. Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0
+ 41. Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0
+ 42. Parameter Settings for User Entity Instance: seg_scan:seg_scan_m0
+ 43. Port Connectivity Checks: "seg_scan:seg_scan_m0"
+ 44. Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0"
+ 45. Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0"
+ 46. Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0"
+ 47. Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf"
+ 48. Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0"
+ 49. Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0"
+ 50. Port Connectivity Checks: "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller"
+ 51. Port Connectivity Checks: "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0"
+ 52. Port Connectivity Checks: "i2c_config:i2c_config_m0"
+ 53. Post-Synthesis Netlist Statistics for Top Partition
+ 54. Elapsed Time Per Partition
+ 55. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Mar 20 15:31:54 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; sd_card_test                                ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,377                                       ;
+;     Total combinational functions  ; 1,153                                       ;
+;     Dedicated logic registers      ; 778                                         ;
+; Total registers                    ; 778                                         ;
+; Total pins                         ; 28                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                                      ; top                ; sd_card_test       ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++---------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++---------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; src/ip_core/afifo_8i_32o_1024.v       ; yes             ; User Wizard-Generated File   ; D:/intel_project/AX301/demo/15_sd_card_audio/src/ip_core/afifo_8i_32o_1024.v       ;         ;
+; src/top.v                             ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v                             ;         ;
+; src/audio_tx.v                        ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/audio_tx.v                        ;         ;
+; src/i2c_master/i2c_master_top.v       ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_top.v       ;         ;
+; src/i2c_master/i2c_master_defines.v   ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_defines.v   ;         ;
+; src/i2c_master/i2c_master_byte_ctrl.v ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_byte_ctrl.v ;         ;
+; src/i2c_master/i2c_master_bit_ctrl.v  ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v  ;         ;
+; src/i2c_master/i2c_config.v           ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_config.v           ;         ;
+; src/lut_wm8731.v                      ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/lut_wm8731.v                      ;         ;
+; src/wav_read.v                        ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/wav_read.v                        ;         ;
+; src/sd_card/spi_master.v              ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/spi_master.v              ;         ;
+; src/sd_card/sd_card_top.v             ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_top.v             ;         ;
+; src/sd_card/sd_card_sec_read_write.v  ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_sec_read_write.v  ;         ;
+; src/sd_card/sd_card_cmd.v             ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_cmd.v             ;         ;
+; src/sd_card_audio.v                   ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v                   ;         ;
+; src/seg_scan.v                        ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/seg_scan.v                        ;         ;
+; src/seg_decoder.v                     ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/seg_decoder.v                     ;         ;
+; src/ax_debounce.v                     ; yes             ; User Verilog HDL File        ; D:/intel_project/AX301/demo/15_sd_card_audio/src/ax_debounce.v                     ;         ;
+; dcfifo_mixed_widths.tdf               ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dcfifo_mixed_widths.tdf     ;         ;
+; db/dcfifo_crl1.tdf                    ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf                    ;         ;
+; db/a_gray2bin_ugb.tdf                 ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/a_gray2bin_ugb.tdf                 ;         ;
+; db/a_graycounter_t57.tdf              ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/a_graycounter_t57.tdf              ;         ;
+; db/a_graycounter_ojc.tdf              ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/a_graycounter_ojc.tdf              ;         ;
+; db/altsyncram_kj31.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/altsyncram_kj31.tdf                ;         ;
+; db/dffpipe_gd9.tdf                    ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_gd9.tdf                    ;         ;
+; db/alt_synch_pipe_0ol.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/alt_synch_pipe_0ol.tdf             ;         ;
+; db/dffpipe_hd9.tdf                    ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_hd9.tdf                    ;         ;
+; db/dffpipe_pe9.tdf                    ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_pe9.tdf                    ;         ;
+; db/alt_synch_pipe_1ol.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/alt_synch_pipe_1ol.tdf             ;         ;
+; db/dffpipe_id9.tdf                    ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_id9.tdf                    ;         ;
+; db/cmpr_f66.tdf                       ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/cmpr_f66.tdf                       ;         ;
+; db/cntr_64e.tdf                       ; yes             ; Auto-Generated Megafunction  ; D:/intel_project/AX301/demo/15_sd_card_audio/db/cntr_64e.tdf                       ;         ;
++---------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,377     ;
+;                                             ;           ;
+; Total combinational functions               ; 1153      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 496       ;
+;     -- 3 input functions                    ; 270       ;
+;     -- <=2 input functions                  ; 387       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 872       ;
+;     -- arithmetic mode                      ; 281       ;
+;                                             ;           ;
+; Total registers                             ; 778       ;
+;     -- Dedicated logic registers            ; 778       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 28        ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 786       ;
+; Total fan-out                               ; 6477      ;
+; Average fan-out                             ; 3.24      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                             ;
++--------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                           ; Entity Name            ; Library Name ;
++--------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |top                                                         ; 1153 (1)            ; 778 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 28   ; 0            ; |top                                                                                                                                                                                          ; top                    ; work         ;
+;    |i2c_config:i2c_config_m0|                                ; 247 (26)            ; 130 (14)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|i2c_config:i2c_config_m0                                                                                                                                                                 ; i2c_config             ; work         ;
+;       |i2c_master_top:i2c_master_top_m0|                     ; 221 (29)            ; 116 (20)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0                                                                                                                                ; i2c_master_top         ; work         ;
+;          |i2c_master_byte_ctrl:byte_controller|              ; 192 (50)            ; 96 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller                                                                                           ; i2c_master_byte_ctrl   ; work         ;
+;             |i2c_master_bit_ctrl:bit_controller|             ; 142 (142)           ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller                                                        ; i2c_master_bit_ctrl    ; work         ;
+;    |lut_wm8731:lut_wm8731_m0|                                ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lut_wm8731:lut_wm8731_m0                                                                                                                                                                 ; lut_wm8731             ; work         ;
+;    |sd_card_audio:sd_card_audio_m0|                          ; 834 (0)             ; 599 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0                                                                                                                                                           ; sd_card_audio          ; work         ;
+;       |afifo_8i_32o_1024:audio_buf|                          ; 76 (0)              ; 111 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf                                                                                                                               ; afifo_8i_32o_1024      ; work         ;
+;          |dcfifo_mixed_widths:dcfifo_mixed_widths_component| ; 76 (0)              ; 111 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component                                                                             ; dcfifo_mixed_widths    ; work         ;
+;             |dcfifo_crl1:auto_generated|                     ; 76 (14)             ; 111 (29)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated                                                  ; dcfifo_crl1            ; work         ;
+;                |a_gray2bin_ugb:wrptr_g_gray2bin|             ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_gray2bin_ugb:wrptr_g_gray2bin                  ; a_gray2bin_ugb         ; work         ;
+;                |a_gray2bin_ugb:ws_dgrp_gray2bin|             ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_gray2bin_ugb:ws_dgrp_gray2bin                  ; a_gray2bin_ugb         ; work         ;
+;                |a_graycounter_ojc:wrptr_g1p|                 ; 16 (16)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_ojc:wrptr_g1p                      ; a_graycounter_ojc      ; work         ;
+;                |a_graycounter_t57:rdptr_g1p|                 ; 17 (17)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_t57:rdptr_g1p                      ; a_graycounter_t57      ; work         ;
+;                |alt_synch_pipe_0ol:rs_dgwp|                  ; 0 (0)               ; 18 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp                       ; alt_synch_pipe_0ol     ; work         ;
+;                   |dffpipe_hd9:dffpipe13|                    ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13 ; dffpipe_hd9            ; work         ;
+;                |alt_synch_pipe_1ol:ws_dgrp|                  ; 0 (0)               ; 18 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp                       ; alt_synch_pipe_1ol     ; work         ;
+;                   |dffpipe_id9:dffpipe17|                    ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17 ; dffpipe_id9            ; work         ;
+;                |altsyncram_kj31:fifo_ram|                    ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|altsyncram_kj31:fifo_ram                         ; altsyncram_kj31        ; work         ;
+;                |cmpr_f66:rdempty_eq_comp|                    ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|cmpr_f66:rdempty_eq_comp                         ; cmpr_f66               ; work         ;
+;                |cmpr_f66:wrfull_eq_comp|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|cmpr_f66:wrfull_eq_comp                          ; cmpr_f66               ; work         ;
+;                |cntr_64e:cntr_b|                             ; 3 (3)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|cntr_64e:cntr_b                                  ; cntr_64e               ; work         ;
+;                |dffpipe_gd9:ws_brp|                          ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:ws_brp                               ; dffpipe_gd9            ; work         ;
+;                |dffpipe_pe9:ws_bwp|                          ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_pe9:ws_bwp                               ; dffpipe_pe9            ; work         ;
+;       |audio_tx:audio_tx_m0|                                 ; 68 (68)             ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0                                                                                                                                      ; audio_tx               ; work         ;
+;       |ax_debounce:ax_debounce_m0|                           ; 77 (77)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0                                                                                                                                ; ax_debounce            ; work         ;
+;       |sd_card_top:sd_card_top_m0|                           ; 360 (0)             ; 193 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0                                                                                                                                ; sd_card_top            ; work         ;
+;          |sd_card_cmd:sd_card_cmd_m0|                        ; 208 (208)           ; 61 (61)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0                                                                                                     ; sd_card_cmd            ; work         ;
+;          |sd_card_sec_read_write:sd_card_sec_read_write_m0|  ; 94 (94)             ; 88 (88)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0                                                                               ; sd_card_sec_read_write ; work         ;
+;          |spi_master:spi_master_m0|                          ; 58 (58)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0                                                                                                       ; spi_master             ; work         ;
+;       |wav_read:wav_read_m0|                                 ; 253 (253)           ; 188 (188)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0                                                                                                                                      ; wav_read               ; work         ;
+;    |seg_scan:seg_scan_m0|                                    ; 59 (59)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_scan:seg_scan_m0                                                                                                                                                                     ; seg_scan               ; work         ;
++--------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|altsyncram_kj31:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 256          ; 32           ; 8192 ; None ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|state               ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+; Name                  ; state.ACK_WAIT ; state.LAST_HALF_CYCLE ; state.ACK ; state.DCLK_IDLE ; state.DCLK_EDGE ; state.IDLE ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+; state.IDLE            ; 0              ; 0                     ; 0         ; 0               ; 0               ; 0          ;
+; state.DCLK_EDGE       ; 0              ; 0                     ; 0         ; 0               ; 1               ; 1          ;
+; state.DCLK_IDLE       ; 0              ; 0                     ; 0         ; 1               ; 0               ; 1          ;
+; state.ACK             ; 0              ; 0                     ; 1         ; 0               ; 0               ; 1          ;
+; state.LAST_HALF_CYCLE ; 0              ; 1                     ; 0         ; 0               ; 0               ; 1          ;
+; state.ACK_WAIT        ; 1              ; 0                     ; 0         ; 0               ; 0               ; 1          ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state                                                                                                                                                                                                    ;
++----------------------+-------------+-------------+-------------------+-------------------+----------------------+----------------------+---------------------+------------------+--------------+-------------------+------------------+-------------+-----------------+--------------+--------------+--------------+
+; Name                 ; state.S_END ; state.S_ERR ; state.S_WRITE_ACK ; state.S_WRITE_CRC ; state.S_WRITE_DATA_1 ; state.S_WRITE_DATA_0 ; state.S_WRITE_TOKEN ; state.S_READ_ACK ; state.S_READ ; state.S_READ_WAIT ; state.S_CMD_DATA ; state.S_CMD ; state.S_CMD_PRE ; state.S_INIT ; state.S_WAIT ; state.S_IDLE ;
++----------------------+-------------+-------------+-------------------+-------------------+----------------------+----------------------+---------------------+------------------+--------------+-------------------+------------------+-------------+-----------------+--------------+--------------+--------------+
+; state.S_IDLE         ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 0            ;
+; state.S_WAIT         ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 1            ; 1            ;
+; state.S_INIT         ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 1            ; 0            ; 1            ;
+; state.S_CMD_PRE      ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 1               ; 0            ; 0            ; 1            ;
+; state.S_CMD          ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 1           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_CMD_DATA     ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 1                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_READ_WAIT    ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 1                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_READ         ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 1            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_READ_ACK     ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 1                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_WRITE_TOKEN  ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 1                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_WRITE_DATA_0 ; 0           ; 0           ; 0                 ; 0                 ; 0                    ; 1                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_WRITE_DATA_1 ; 0           ; 0           ; 0                 ; 0                 ; 1                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_WRITE_CRC    ; 0           ; 0           ; 0                 ; 1                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_WRITE_ACK    ; 0           ; 0           ; 1                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_ERR          ; 0           ; 1           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
+; state.S_END          ; 1           ; 0           ; 0                 ; 0                 ; 0                    ; 0                    ; 0                   ; 0                ; 0            ; 0                 ; 0                ; 0           ; 0               ; 0            ; 0            ; 1            ;
++----------------------+-------------+-------------+-------------------+-------------------+----------------------+----------------------+---------------------+------------------+--------------+-------------------+------------------+-------------+-----------------+--------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state                                                                                                                ;
++-------------------------+---------------+-------------------------+------------------+-------------------+---------------+---------------+--------------+---------------+---------------+---------------+--------------+--------------+--------------+
+; Name                    ; state.S_CMD16 ; state.S_WAIT_READ_WRITE ; state.S_READ_END ; state.S_WRITE_END ; state.S_WRITE ; state.S_CMD24 ; state.S_READ ; state.S_CMD17 ; state.S_CMD41 ; state.S_CMD55 ; state.S_CMD8 ; state.S_CMD0 ; state.S_IDLE ;
++-------------------------+---------------+-------------------------+------------------+-------------------+---------------+---------------+--------------+---------------+---------------+---------------+--------------+--------------+--------------+
+; state.S_IDLE            ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ;
+; state.S_CMD0            ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 1            ; 1            ;
+; state.S_CMD8            ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 1            ; 0            ; 1            ;
+; state.S_CMD55           ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 1             ; 0            ; 0            ; 1            ;
+; state.S_CMD41           ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 1             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_CMD17           ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 1             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_READ            ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 1            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_CMD24           ; 0             ; 0                       ; 0                ; 0                 ; 0             ; 1             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_WRITE           ; 0             ; 0                       ; 0                ; 0                 ; 1             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_WRITE_END       ; 0             ; 0                       ; 0                ; 1                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_READ_END        ; 0             ; 0                       ; 1                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_WAIT_READ_WRITE ; 0             ; 1                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
+; state.S_CMD16           ; 1             ; 0                       ; 0                ; 0                 ; 0             ; 0             ; 0            ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ;
++-------------------------+---------------+-------------------------+------------------+-------------------+---------------+---------------+--------------+---------------+---------------+---------------+--------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state                   ;
++-------------------+--------------+-------------------+--------------+--------------+-------------+
+; Name              ; state.S_PLAY ; state.S_PLAY_WAIT ; state.S_FIND ; state.S_IDLE ; state.S_END ;
++-------------------+--------------+-------------------+--------------+--------------+-------------+
+; state.S_IDLE      ; 0            ; 0                 ; 0            ; 0            ; 0           ;
+; state.S_FIND      ; 0            ; 0                 ; 1            ; 1            ; 0           ;
+; state.S_PLAY_WAIT ; 0            ; 1                 ; 0            ; 1            ; 0           ;
+; state.S_PLAY      ; 1            ; 0                 ; 0            ; 1            ; 0           ;
+; state.S_END       ; 0            ; 0                 ; 0            ; 1            ; 1           ;
++-------------------+--------------+-------------------+--------------+--------------+-------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |top|i2c_config:i2c_config_m0|state                                               ;
++----------------------+---------------------+----------------+----------------------+--------------+
+; Name                 ; state.S_WR_I2C_DONE ; state.S_WR_I2C ; state.S_WR_I2C_CHECK ; state.S_IDLE ;
++----------------------+---------------------+----------------+----------------------+--------------+
+; state.S_IDLE         ; 0                   ; 0              ; 0                    ; 0            ;
+; state.S_WR_I2C_CHECK ; 0                   ; 0              ; 1                    ; 1            ;
+; state.S_WR_I2C       ; 0                   ; 1              ; 0                    ; 1            ;
+; state.S_WR_I2C_DONE  ; 1                   ; 0              ; 0                    ; 1            ;
++----------------------+---------------------+----------------+----------------------+--------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state                                                                                                                                                                                                                                                             ;
++----------------------+----------------+----------------------+----------------------+--------------+-----------------+-----------------+-----------------+----------------------+---------------------+----------------------+---------------------+----------------+-----------------+---------------------+---------------------+--------------+
+; Name                 ; state.S_RD_ACK ; state.S_RD_REG_ADDR1 ; state.S_WR_REG_ADDR1 ; state.S_WAIT ; state.S_WR_STOP ; state.S_RD_STOP ; state.S_RD_DATA ; state.S_RD_DEV_ADDR1 ; state.S_RD_REG_ADDR ; state.S_RD_DEV_ADDR0 ; state.S_WR_ERR_NACK ; state.S_WR_ACK ; state.S_WR_DATA ; state.S_WR_REG_ADDR ; state.S_WR_DEV_ADDR ; state.S_IDLE ;
++----------------------+----------------+----------------------+----------------------+--------------+-----------------+-----------------+-----------------+----------------------+---------------------+----------------------+---------------------+----------------+-----------------+---------------------+---------------------+--------------+
+; state.S_IDLE         ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 0            ;
+; state.S_WR_DEV_ADDR  ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 1                   ; 1            ;
+; state.S_WR_REG_ADDR  ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 1                   ; 0                   ; 1            ;
+; state.S_WR_DATA      ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 1               ; 0                   ; 0                   ; 1            ;
+; state.S_WR_ACK       ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 1              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_WR_ERR_NACK  ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 1                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_DEV_ADDR0 ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 1                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_REG_ADDR  ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 1                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_DEV_ADDR1 ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 1                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_DATA      ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 1               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_STOP      ; 0              ; 0                    ; 0                    ; 0            ; 0               ; 1               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_WR_STOP      ; 0              ; 0                    ; 0                    ; 0            ; 1               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_WAIT         ; 0              ; 0                    ; 0                    ; 1            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_WR_REG_ADDR1 ; 0              ; 0                    ; 1                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_REG_ADDR1 ; 0              ; 1                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
+; state.S_RD_ACK       ; 1              ; 0                    ; 0                    ; 0            ; 0               ; 0               ; 0               ; 0                    ; 0                   ; 0                    ; 0                   ; 0              ; 0               ; 0                   ; 0                   ; 1            ;
++----------------------+----------------+----------------------+----------------------+--------------+-----------------+-----------------+-----------------+----------------------+---------------------+----------------------+---------------------+----------------+-----------------+---------------------+---------------------+--------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|c_state   ;
++------------------+-----------------+-----------------+----------------+------------------+-----------------+------------------+
+; Name             ; c_state.ST_IDLE ; c_state.ST_STOP ; c_state.ST_ACK ; c_state.ST_WRITE ; c_state.ST_READ ; c_state.ST_START ;
++------------------+-----------------+-----------------+----------------+------------------+-----------------+------------------+
+; c_state.ST_IDLE  ; 0               ; 0               ; 0              ; 0                ; 0               ; 0                ;
+; c_state.ST_START ; 1               ; 0               ; 0              ; 0                ; 0               ; 1                ;
+; c_state.ST_READ  ; 1               ; 0               ; 0              ; 0                ; 1               ; 0                ;
+; c_state.ST_WRITE ; 1               ; 0               ; 0              ; 1                ; 0               ; 0                ;
+; c_state.ST_ACK   ; 1               ; 0               ; 1              ; 0                ; 0               ; 0                ;
+; c_state.ST_STOP  ; 1               ; 1               ; 0              ; 0                ; 0               ; 0                ;
++------------------+-----------------+-----------------+----------------+------------------+-----------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                                                                                                                       ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[8] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[7] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[6] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[5] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[4] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[3] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[2] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[1] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe19a[0] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[8] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[7] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[6] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[5] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[4] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[3] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[2] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[1] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17|dffe18a[0] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[8] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[6] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[7] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[4] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[5] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[2] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[3] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[0] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe15a[1] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[8] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[6] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[7] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[4] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[5] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[2] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[3] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[0] ; yes                                                              ; yes                                        ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13|dffe14a[1] ; yes                                                              ; yes                                        ;
+; Total number of protected registers is 36                                                                                                                                                           ;                                                                  ;                                            ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                                          ; Reason for Removal                                                                                                                                        ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state_code[2,3]                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_pe9:ws_bwp|dffe16a[10] ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:ws_brp|dffe12a[8]  ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|clk_div[1,2,8..15]                                                                ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|clk_div[0]                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|clk_div[4..7]                                                                     ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|clk_div[3]                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd_data_len[0,1,3..15]                                     ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[47]                            ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd_r1[1..7]                                                ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[47]                            ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|spi_clk_div[1,2,8..15]                                      ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|spi_clk_div[0]                     ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|spi_clk_div[4..7]                                           ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|spi_clk_div[3]                     ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sda_chk                              ; Merged with i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[16] ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[2,7]                                                    ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[0]                             ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[5,6]                                                    ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[3]                             ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[42]                                                     ; Merged with sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[41]                            ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[17]                          ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; seg_scan:seg_scan_m0|seg_data[7]                                                                                                                                       ; Stuck at VCC due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[47]                                                     ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|state~4                                                                             ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|state~5                                                                             ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|state~6                                                                             ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state~16                                                                          ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state~17                                                                          ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state~18                                                                          ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state~19                                                                          ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state~13                                                    ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state~14                                                    ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state~15                                                    ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state~16                                                    ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state~17                                                    ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state~6                                                                                                            ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state~7                                                                                                            ; Lost fanout                                                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state~9                                                                                                            ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|state~7                                                                                                                                       ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|state~8                                                                                                                                       ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|state~9                                                                                                                                       ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state~4                                                                                                      ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state~5                                                                                                      ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state~6                                                                                                      ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state~7                                                                                                      ; Lost fanout                                                                                                                                               ;
+; i2c_config:i2c_config_m0|state.S_IDLE                                                                                                                                  ; Merged with i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|ack_in                                                                              ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE                                                                      ; Merged with i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|ack_in                                                                              ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_IDLE                                                ; Merged with i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|ack_in                                                                              ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_REG_ADDR1                                                                                         ; Merged with i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DEV_ADDR0                                                                ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_WR_REG_ADDR1                                                                                         ; Merged with i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DEV_ADDR0                                                                ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_CMD24                                               ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DEV_ADDR0                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_REG_ADDR                                                                                          ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DEV_ADDR1                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DATA                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|read                                                                                                         ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_STOP                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_ACK                                                                                               ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_WRITE                                               ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|c_state.ST_READ                                                         ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_write_req                                             ; Stuck at GND due to stuck port clock_enable                                                                                                               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN                                                               ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_WRITE_END                                           ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|spi_clk_div[0]                                              ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|clk_div[0]                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                    ;
+; Total Number of Removed Registers = 105                                                                                                                                ;                                                                                                                                                           ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                         ;
++--------------------------------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                            ; Reason for Removal        ; Registers Removed due to This Register                                                                                       ;
++--------------------------------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------+
+; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DEV_ADDR1                                           ; Stuck at GND              ; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_DATA,                                                   ;
+;                                                                                                                          ; due to stuck port data_in ; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|read,                                                              ;
+;                                                                                                                          ;                           ; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_STOP,                                                   ;
+;                                                                                                                          ;                           ; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state.S_RD_ACK,                                                    ;
+;                                                                                                                          ;                           ; i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|c_state.ST_READ               ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_CMD24 ; Stuck at GND              ; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_WRITE,    ;
+;                                                                                                                          ; due to stuck port data_in ; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_write_req,  ;
+;                                                                                                                          ;                           ; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN,                    ;
+;                                                                                                                          ;                           ; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|state.S_WRITE_END ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[47]       ; Stuck at GND              ; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|clk_div[0]                              ;
+;                                                                                                                          ; due to stuck port data_in ;                                                                                                                              ;
++--------------------------------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 778   ;
+; Number of registers using Synchronous Clear  ; 126   ;
+; Number of registers using Synchronous Load   ; 29    ;
+; Number of registers using Asynchronous Clear ; 538   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 435   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                 ; Fan out ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|CS_reg                                                                                       ; 3       ;
+; seg_scan:seg_scan_m0|seg_sel[0]                                                                                                                                                   ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[1]                                                                                                                                                   ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[2]                                                                                                                                                   ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[3]                                                                                                                                                   ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[4]                                                                                                                                                   ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[5]                                                                                                                                                   ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[0]                                                                                                                                                  ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[1]                                                                                                                                                  ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[2]                                                                                                                                                  ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[3]                                                                                                                                                  ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[4]                                                                                                                                                  ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[5]                                                                                                                                                  ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[6]                                                                                                                                                  ; 1       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[7]                                                                                 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[6]                                                                                 ; 2       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|spi_clk_div[3]                                                         ; 2       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[5]                                                                                 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[4]                                                                                 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0|button_out                                                                                                              ; 3       ;
+; sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0|button_out_d0                                                                                                           ; 1       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[3]                                                                                 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|sd_sec_read_addr[13]                                                                                                          ; 4       ;
+; sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|sd_sec_read_addr[2]                                                                                                           ; 3       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[2]                                                                                 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[1]                                                                                 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_ojc:wrptr_g1p|sub_parity9a0 ; 1       ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_t57:rdptr_g1p|counter5a0    ; 7       ;
+; sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[0]                                                                                 ; 4       ;
+; sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_t57:rdptr_g1p|parity6       ; 4       ;
+; Total number of inverted registers = 30                                                                                                                                           ;         ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|clk_edge_cnt[2]                                              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|play_cnt[12]                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|MOSI_shift[1]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0|MISO_shift[7]                                                ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[15]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0|right_data_shift[25]                                                                        ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0|right_data_shift[15]                                                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0|left_data_shift[26]                                                                         ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0|left_data_shift[12]                                                                         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cnt[0]        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSCL[2]       ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|filter_cnt[2] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|rd_cnt[8]                                                                                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|dcnt[2]                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|sr[7]                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[9]    ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|sd_sec_read_addr[19]                                                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|txr[5]                                                                                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|txr[7]                                                                                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|txr[3]                                                                                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[47]                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd_data_len[2]                      ;
+; 7:1                ; 25 bits   ; 100 LEs       ; 25 LEs               ; 75 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[28]                              ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[38]                              ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|cmd[13]                              ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; Yes        ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|core_cmd[3]                                      ;
+; 20:1               ; 16 bits   ; 208 LEs       ; 16 LEs               ; 192 LEs                ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|byte_cnt[15]                                               ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 20 LEs               ; 16 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[3]                                               ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|send_data[1]                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|core_cmd                                         ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state                                                                                       ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top|sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0|state                                                                                       ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 15 LEs               ; 25 LEs                 ; No         ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|Selector10                           ;
+; 22:1               ; 9 bits    ; 126 LEs       ; 54 LEs               ; 72 LEs                 ; No         ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|Selector9                                                  ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |top|sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|Selector10                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated ;
++---------------------------------------+-------+------+---------------------------------------------------------------------------------------------------------+
+; Assignment                            ; Value ; From ; To                                                                                                      ;
++---------------------------------------+-------+------+---------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION       ; OFF   ; -    ; -                                                                                                       ;
+; REMOVE_DUPLICATE_REGISTERS            ; OFF   ; -    ; -                                                                                                       ;
+; SYNCHRONIZER_IDENTIFICATION           ; OFF   ; -    ; -                                                                                                       ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2     ; -    ; -                                                                                                       ;
++---------------------------------------+-------+------+---------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_t57:rdptr_g1p ;
++----------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                                                         ;
++----------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter5a0                                                                                                                                                 ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity6                                                                                                                                                    ;
++----------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_ojc:wrptr_g1p ;
++----------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                                                         ;
++----------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; sub_parity9a0                                                                                                                                              ;
+; POWER_UP_LEVEL ; LOW   ; -    ; parity8                                                                                                                                                    ;
++----------------+-------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|altsyncram_kj31:fifo_ram ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:rs_brp ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                               ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:rs_bwp ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                               ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp ;
++-----------------------------+------------------------+------+-----------------------------------------------------------------------------------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                                                                                          ;
++-----------------------------+------------------------+------+-----------------------------------------------------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                                                                                           ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                                                                                           ;
+; PRESERVE_REGISTER           ; ON                     ; -    ; -                                                                                                                           ;
+; DONT_MERGE_REGISTER         ; ON                     ; -    ; -                                                                                                                           ;
+; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; -                                                                                                                           ;
++-----------------------------+------------------------+------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13 ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:ws_brp ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                               ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_pe9:ws_bwp ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                               ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp ;
++-----------------------------+------------------------+------+-----------------------------------------------------------------------------------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                                                                                          ;
++-----------------------------+------------------------+------+-----------------------------------------------------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                                                                                           ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                                                                                           ;
+; PRESERVE_REGISTER           ; ON                     ; -    ; -                                                                                                                           ;
+; DONT_MERGE_REGISTER         ; ON                     ; -    ; -                                                                                                                           ;
+; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; -                                                                                                                           ;
++-----------------------------+------------------------+------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17 ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+; ST_IDLE        ; 00000 ; Unsigned Binary                                                                                                    ;
+; ST_START       ; 00001 ; Unsigned Binary                                                                                                    ;
+; ST_READ        ; 00010 ; Unsigned Binary                                                                                                    ;
+; ST_WRITE       ; 00100 ; Unsigned Binary                                                                                                    ;
+; ST_ACK         ; 01000 ; Unsigned Binary                                                                                                    ;
+; ST_STOP        ; 10000 ; Unsigned Binary                                                                                                    ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller ;
++----------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value              ; Type                                                                                                                                     ;
++----------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+; idle           ; 000000000000000000 ; Unsigned Binary                                                                                                                          ;
+; start_a        ; 000000000000000001 ; Unsigned Binary                                                                                                                          ;
+; start_b        ; 000000000000000010 ; Unsigned Binary                                                                                                                          ;
+; start_c        ; 000000000000000100 ; Unsigned Binary                                                                                                                          ;
+; start_d        ; 000000000000001000 ; Unsigned Binary                                                                                                                          ;
+; start_e        ; 000000000000010000 ; Unsigned Binary                                                                                                                          ;
+; stop_a         ; 000000000000100000 ; Unsigned Binary                                                                                                                          ;
+; stop_b         ; 000000000001000000 ; Unsigned Binary                                                                                                                          ;
+; stop_c         ; 000000000010000000 ; Unsigned Binary                                                                                                                          ;
+; stop_d         ; 000000000100000000 ; Unsigned Binary                                                                                                                          ;
+; rd_a           ; 000000001000000000 ; Unsigned Binary                                                                                                                          ;
+; rd_b           ; 000000010000000000 ; Unsigned Binary                                                                                                                          ;
+; rd_c           ; 000000100000000000 ; Unsigned Binary                                                                                                                          ;
+; rd_d           ; 000001000000000000 ; Unsigned Binary                                                                                                                          ;
+; wr_a           ; 000010000000000000 ; Unsigned Binary                                                                                                                          ;
+; wr_b           ; 000100000000000000 ; Unsigned Binary                                                                                                                          ;
+; wr_c           ; 001000000000000000 ; Unsigned Binary                                                                                                                          ;
+; wr_d           ; 010000000000000000 ; Unsigned Binary                                                                                                                          ;
++----------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                ;
+; FREQ           ; 100   ; Signed Integer                                                                ;
+; MAX_TIME       ; 20    ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component ;
++-------------------------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name                            ; Value       ; Type                                                                                            ;
++-------------------------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; ACF_DISABLE_EMBEDDED_TIMING_CONSTRAINT    ; FALSE       ; Untyped                                                                                         ;
+; ACF_DISABLE_MLAB_RAM_USE                  ; FALSE       ; Untyped                                                                                         ;
+; ADD_RAM_OUTPUT_REGISTER                   ; OFF         ; Untyped                                                                                         ;
+; ADD_USEDW_MSB_BIT                         ; OFF         ; Untyped                                                                                         ;
+; CLOCKS_ARE_SYNCHRONIZED                   ; FALSE       ; Untyped                                                                                         ;
+; DELAY_RDUSEDW                             ; 1           ; Untyped                                                                                         ;
+; DELAY_WRUSEDW                             ; 1           ; Untyped                                                                                         ;
+; DISABLE_DCFIFO_EMBEDDED_TIMING_CONSTRAINT ; FALSE       ; Untyped                                                                                         ;
+; ENABLE_ECC                                ; FALSE       ; Untyped                                                                                         ;
+; LPM_NUMWORDS                              ; 1024        ; Signed Integer                                                                                  ;
+; LPM_SHOWAHEAD                             ; OFF         ; Untyped                                                                                         ;
+; LPM_WIDTH                                 ; 8           ; Signed Integer                                                                                  ;
+; LPM_WIDTH_R                               ; 32          ; Signed Integer                                                                                  ;
+; LPM_WIDTHU                                ; 10          ; Signed Integer                                                                                  ;
+; LPM_WIDTHU_R                              ; 8           ; Signed Integer                                                                                  ;
+; MAXIMIZE_SPEED                            ; 5           ; Untyped                                                                                         ;
+; OVERFLOW_CHECKING                         ; ON          ; Untyped                                                                                         ;
+; RAM_BLOCK_TYPE                            ; AUTO        ; Untyped                                                                                         ;
+; RDSYNC_DELAYPIPE                          ; 4           ; Signed Integer                                                                                  ;
+; READ_ACLR_SYNCH                           ; OFF         ; Untyped                                                                                         ;
+; UNDERFLOW_CHECKING                        ; ON          ; Untyped                                                                                         ;
+; USE_EAB                                   ; ON          ; Untyped                                                                                         ;
+; WRITE_ACLR_SYNCH                          ; OFF         ; Untyped                                                                                         ;
+; WRSYNC_DELAYPIPE                          ; 4           ; Signed Integer                                                                                  ;
+; CBXI_PARAMETER                            ; dcfifo_crl1 ; Untyped                                                                                         ;
++-------------------------------------------+-------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; FIFO_DEPTH     ; 1024  ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0 ;
++--------------------+-------+---------------------------------------------------------------------------+
+; Parameter Name     ; Value ; Type                                                                      ;
++--------------------+-------+---------------------------------------------------------------------------+
+; SPI_LOW_SPEED_DIV  ; 248   ; Signed Integer                                                            ;
+; SPI_HIGH_SPEED_DIV ; 0     ; Signed Integer                                                            ;
++--------------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0 ;
++--------------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name     ; Value ; Type                                                                                                                       ;
++--------------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; SPI_LOW_SPEED_DIV  ; 248   ; Signed Integer                                                                                                             ;
+; SPI_HIGH_SPEED_DIV ; 0     ; Signed Integer                                                                                                             ;
++--------------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+; S_IDLE         ; 0     ; Signed Integer                                                                                           ;
+; S_WAIT         ; 1     ; Signed Integer                                                                                           ;
+; S_INIT         ; 2     ; Signed Integer                                                                                           ;
+; S_CMD_PRE      ; 3     ; Signed Integer                                                                                           ;
+; S_CMD          ; 4     ; Signed Integer                                                                                           ;
+; S_CMD_DATA     ; 5     ; Signed Integer                                                                                           ;
+; S_READ_WAIT    ; 6     ; Signed Integer                                                                                           ;
+; S_READ         ; 7     ; Signed Integer                                                                                           ;
+; S_READ_ACK     ; 8     ; Signed Integer                                                                                           ;
+; S_WRITE_TOKEN  ; 9     ; Signed Integer                                                                                           ;
+; S_WRITE_DATA_0 ; 10    ; Signed Integer                                                                                           ;
+; S_WRITE_DATA_1 ; 11    ; Signed Integer                                                                                           ;
+; S_WRITE_CRC    ; 12    ; Signed Integer                                                                                           ;
+; S_WRITE_ACK    ; 13    ; Signed Integer                                                                                           ;
+; S_ERR          ; 14    ; Signed Integer                                                                                           ;
+; S_END          ; 15    ; Signed Integer                                                                                           ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seg_scan:seg_scan_m0 ;
++----------------+----------+---------------------------------------+
+; Parameter Name ; Value    ; Type                                  ;
++----------------+----------+---------------------------------------+
+; SCAN_FREQ      ; 200      ; Signed Integer                        ;
+; CLK_FREQ       ; 50000000 ; Signed Integer                        ;
+; SCAN_COUNT     ; 41665    ; Signed Integer                        ;
++----------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "seg_scan:seg_scan_m0" ;
++---------------+-------+----------+---------------+
+; Port          ; Type  ; Severity ; Details       ;
++---------------+-------+----------+---------------+
+; seg_data_0    ; Input ; Info     ; Stuck at VCC  ;
+; seg_data_1    ; Input ; Info     ; Stuck at VCC  ;
+; seg_data_2    ; Input ; Info     ; Stuck at VCC  ;
+; seg_data_3    ; Input ; Info     ; Stuck at VCC  ;
+; seg_data_4    ; Input ; Info     ; Stuck at VCC  ;
+; seg_data_5[7] ; Input ; Info     ; Stuck at VCC  ;
++---------------+-------+----------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0" ;
++------+-------+----------+--------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                              ;
++------+-------+----------+--------------------------------------------------------------------------------------+
+; CPOL ; Input ; Info     ; Stuck at VCC                                                                         ;
+; CPHA ; Input ; Info     ; Stuck at VCC                                                                         ;
++------+-------+----------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0" ;
++-----------------------+--------+----------+-------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                   ;
++-----------------------+--------+----------+-------------------------------------------+
+; sd_sec_write          ; Input  ; Info     ; Stuck at GND                              ;
+; sd_sec_write_addr     ; Input  ; Info     ; Stuck at GND                              ;
+; sd_sec_write_data     ; Input  ; Info     ; Explicitly unconnected                    ;
+; sd_sec_write_data_req ; Output ; Info     ; Explicitly unconnected                    ;
+; sd_sec_write_end      ; Output ; Info     ; Explicitly unconnected                    ;
++-----------------------+--------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0" ;
++-------+--------+----------+-----------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                             ;
++-------+--------+----------+-----------------------------------------------------+
+; ready ; Output ; Info     ; Explicitly unconnected                              ;
++-------+--------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf" ;
++---------+--------+----------+----------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                  ;
++---------+--------+----------+----------------------------------------------------------+
+; aclr    ; Input  ; Info     ; Stuck at GND                                             ;
+; wrfull  ; Output ; Info     ; Explicitly unconnected                                   ;
+; rdusedw ; Output ; Info     ; Explicitly unconnected                                   ;
++---------+--------+----------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0" ;
++--------------------+-------+----------+-----------------------------------------+
+; Port               ; Type  ; Severity ; Details                                 ;
++--------------------+-------+----------+-----------------------------------------+
+; left_data[31..16]  ; Input ; Info     ; Stuck at GND                            ;
+; right_data[31..16] ; Input ; Info     ; Stuck at GND                            ;
++--------------------+-------+----------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0" ;
++----------------+--------+----------+--------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                          ;
++----------------+--------+----------+--------------------------------------------------+
+; button_posedge ; Output ; Info     ; Explicitly unconnected                           ;
+; button_out     ; Output ; Info     ; Explicitly unconnected                           ;
++----------------+--------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller" ;
++----------+--------+----------+---------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------+
+; nReset   ; Input  ; Info     ; Stuck at VCC                                                                                ;
+; ena      ; Input  ; Info     ; Stuck at VCC                                                                                ;
+; i2c_busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.         ;
+; i2c_al   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.         ;
++----------+--------+----------+---------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0"                                      ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; i2c_read_req_ack ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; i2c_read_data    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "i2c_config:i2c_config_m0"            ;
++--------------------+--------+----------+------------------------+
+; Port               ; Type   ; Severity ; Details                ;
++--------------------+--------+----------+------------------------+
+; clk_div_cnt[6..5]  ; Input  ; Info     ; Stuck at VCC           ;
+; clk_div_cnt[1..0]  ; Input  ; Info     ; Stuck at VCC           ;
+; clk_div_cnt[15..7] ; Input  ; Info     ; Stuck at GND           ;
+; clk_div_cnt[4..2]  ; Input  ; Info     ; Stuck at GND           ;
+; i2c_addr_2byte     ; Input  ; Info     ; Stuck at GND           ;
+; error              ; Output ; Info     ; Explicitly unconnected ;
+; done               ; Output ; Info     ; Explicitly unconnected ;
++--------------------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 28                          ;
+; cycloneiii_ff         ; 778                         ;
+;     CLR               ; 143                         ;
+;     CLR SCLR          ; 52                          ;
+;     CLR SLD           ; 10                          ;
+;     ENA               ; 94                          ;
+;     ENA CLR           ; 267                         ;
+;     ENA CLR SCLR      ; 63                          ;
+;     ENA CLR SLD       ; 3                           ;
+;     ENA SCLR          ; 8                           ;
+;     SCLR              ; 3                           ;
+;     SLD               ; 16                          ;
+;     plain             ; 119                         ;
+; cycloneiii_io_obuf    ; 2                           ;
+; cycloneiii_lcell_comb ; 1168                        ;
+;     arith             ; 281                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 240                         ;
+;         3 data inputs ; 40                          ;
+;     normal            ; 887                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 122                         ;
+;         3 data inputs ; 230                         ;
+;         4 data inputs ; 496                         ;
+; cycloneiii_ram_block  ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.38                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Mar 20 15:31:37 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sd_card_test -c sd_card_test
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/ip_core/afifo_8i_32o_1024.v
+    Info (12023): Found entity 1: afifo_8i_32o_1024 File: D:/intel_project/AX301/demo/15_sd_card_audio/src/ip_core/afifo_8i_32o_1024.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/audio_tx.v
+    Info (12023): Found entity 1: audio_tx File: D:/intel_project/AX301/demo/15_sd_card_audio/src/audio_tx.v Line: 30
+Info (12021): Found 0 design units, including 0 entities, in source file src/i2c_master/timescale.v
+Info (12021): Found 1 design units, including 1 entities, in source file src/i2c_master/i2c_master_top.v
+    Info (12023): Found entity 1: i2c_master_top File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_top.v Line: 30
+Info (12021): Found 0 design units, including 0 entities, in source file src/i2c_master/i2c_master_defines.v
+Warning (10335): Unrecognized synthesis attribute "enum_state" at src/i2c_master/i2c_master_byte_ctrl.v(199) File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_byte_ctrl.v Line: 199
+Info (12021): Found 1 design units, including 1 entities, in source file src/i2c_master/i2c_master_byte_ctrl.v
+    Info (12023): Found entity 1: i2c_master_byte_ctrl File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_byte_ctrl.v Line: 75
+Warning (10335): Unrecognized synthesis attribute "enum_state" at src/i2c_master/i2c_master_bit_ctrl.v(185) File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 185
+Info (12021): Found 1 design units, including 1 entities, in source file src/i2c_master/i2c_master_bit_ctrl.v
+    Info (12023): Found entity 1: i2c_master_bit_ctrl File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 143
+Info (12021): Found 1 design units, including 1 entities, in source file src/i2c_master/i2c_config.v
+    Info (12023): Found entity 1: i2c_config File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_config.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file src/lut_wm8731.v
+    Info (12023): Found entity 1: lut_wm8731 File: D:/intel_project/AX301/demo/15_sd_card_audio/src/lut_wm8731.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file src/wav_read.v
+    Info (12023): Found entity 1: wav_read File: D:/intel_project/AX301/demo/15_sd_card_audio/src/wav_read.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/sd_card/spi_master.v
+    Info (12023): Found entity 1: spi_master File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/spi_master.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/sd_card/sd_card_top.v
+    Info (12023): Found entity 1: sd_card_top File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_top.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/sd_card/sd_card_sec_read_write.v
+    Info (12023): Found entity 1: sd_card_sec_read_write File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_sec_read_write.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/sd_card/sd_card_cmd.v
+    Info (12023): Found entity 1: sd_card_cmd File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_cmd.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/sd_card_audio.v
+    Info (12023): Found entity 1: sd_card_audio File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/seg_scan.v
+    Info (12023): Found entity 1: seg_scan File: D:/intel_project/AX301/demo/15_sd_card_audio/src/seg_scan.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/seg_decoder.v
+    Info (12023): Found entity 1: seg_decoder File: D:/intel_project/AX301/demo/15_sd_card_audio/src/seg_decoder.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/ax_debounce.v
+    Info (12023): Found entity 1: ax_debounce File: D:/intel_project/AX301/demo/15_sd_card_audio/src/ax_debounce.v Line: 31
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "i2c_config" for hierarchy "i2c_config:i2c_config_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 66
+Info (12128): Elaborating entity "i2c_master_top" for hierarchy "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_config.v Line: 157
+Info (10264): Verilog HDL Case Statement information at i2c_master_top.v(246): all case item expressions in this case statement are onehot File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_top.v Line: 246
+Info (12128): Elaborating entity "i2c_master_byte_ctrl" for hierarchy "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_top.v Line: 284
+Info (12128): Elaborating entity "i2c_master_bit_ctrl" for hierarchy "i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_byte_ctrl.v Line: 164
+Warning (10230): Verilog HDL assignment warning at i2c_master_bit_ctrl.v(257): truncated value with size 16 to match size of target (14) File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 257
+Warning (10230): Verilog HDL assignment warning at i2c_master_bit_ctrl.v(258): truncated value with size 32 to match size of target (14) File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 258
+Warning (10766): Verilog HDL Synthesis Attribute warning at i2c_master_bit_ctrl.v(410): ignoring full_case attribute on case statement with explicit default case item File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 410
+Info (10264): Verilog HDL Case Statement information at i2c_master_bit_ctrl.v(410): all case item expressions in this case statement are onehot File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 410
+Warning (10208): Verilog HDL Case Statement warning at i2c_master_bit_ctrl.v(406): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: D:/intel_project/AX301/demo/15_sd_card_audio/src/i2c_master/i2c_master_bit_ctrl.v Line: 406
+Info (12128): Elaborating entity "lut_wm8731" for hierarchy "lut_wm8731:lut_wm8731_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 71
+Info (12128): Elaborating entity "sd_card_audio" for hierarchy "sd_card_audio:sd_card_audio_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 87
+Info (12128): Elaborating entity "ax_debounce" for hierarchy "sd_card_audio:sd_card_audio_m0|ax_debounce:ax_debounce_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v Line: 69
+Info (12128): Elaborating entity "audio_tx" for hierarchy "sd_card_audio:sd_card_audio_m0|audio_tx:audio_tx_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v Line: 81
+Info (12128): Elaborating entity "afifo_8i_32o_1024" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v Line: 96
+Info (12128): Elaborating entity "dcfifo_mixed_widths" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/ip_core/afifo_8i_32o_1024.v Line: 97
+Info (12130): Elaborated megafunction instantiation "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/ip_core/afifo_8i_32o_1024.v Line: 97
+Info (12133): Instantiated megafunction "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component" with the following parameter: File: D:/intel_project/AX301/demo/15_sd_card_audio/src/ip_core/afifo_8i_32o_1024.v Line: 97
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "1024"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "dcfifo_mixed_widths"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "10"
+    Info (12134): Parameter "lpm_widthu_r" = "8"
+    Info (12134): Parameter "lpm_width_r" = "32"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "4"
+    Info (12134): Parameter "read_aclr_synch" = "OFF"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "write_aclr_synch" = "OFF"
+    Info (12134): Parameter "wrsync_delaypipe" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_crl1.tdf
+    Info (12023): Found entity 1: dcfifo_crl1 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 44
+Info (12128): Elaborating entity "dcfifo_crl1" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dcfifo_mixed_widths.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_ugb.tdf
+    Info (12023): Found entity 1: a_gray2bin_ugb File: D:/intel_project/AX301/demo/15_sd_card_audio/db/a_gray2bin_ugb.tdf Line: 22
+Info (12128): Elaborating entity "a_gray2bin_ugb" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_gray2bin_ugb:rdptr_g_gray2bin" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_t57.tdf
+    Info (12023): Found entity 1: a_graycounter_t57 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/a_graycounter_t57.tdf Line: 24
+Info (12128): Elaborating entity "a_graycounter_t57" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_t57:rdptr_g1p" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 63
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_ojc.tdf
+    Info (12023): Found entity 1: a_graycounter_ojc File: D:/intel_project/AX301/demo/15_sd_card_audio/db/a_graycounter_ojc.tdf Line: 24
+Info (12128): Elaborating entity "a_graycounter_ojc" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|a_graycounter_ojc:wrptr_g1p" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 64
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kj31.tdf
+    Info (12023): Found entity 1: altsyncram_kj31 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/altsyncram_kj31.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_kj31" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|altsyncram_kj31:fifo_ram" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 65
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_gd9.tdf
+    Info (12023): Found entity 1: dffpipe_gd9 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_gd9.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_gd9" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_gd9:rs_brp" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 69
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_0ol.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_0ol File: D:/intel_project/AX301/demo/15_sd_card_audio/db/alt_synch_pipe_0ol.tdf Line: 26
+Info (12128): Elaborating entity "alt_synch_pipe_0ol" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 71
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_hd9.tdf
+    Info (12023): Found entity 1: dffpipe_hd9 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_hd9.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_hd9" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_0ol:rs_dgwp|dffpipe_hd9:dffpipe13" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/alt_synch_pipe_0ol.tdf Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_pe9.tdf
+    Info (12023): Found entity 1: dffpipe_pe9 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_pe9.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_pe9" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|dffpipe_pe9:ws_bwp" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 73
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_1ol.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_1ol File: D:/intel_project/AX301/demo/15_sd_card_audio/db/alt_synch_pipe_1ol.tdf Line: 26
+Info (12128): Elaborating entity "alt_synch_pipe_1ol" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 74
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_id9.tdf
+    Info (12023): Found entity 1: dffpipe_id9 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dffpipe_id9.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_id9" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|alt_synch_pipe_1ol:ws_dgrp|dffpipe_id9:dffpipe17" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/alt_synch_pipe_1ol.tdf Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_f66.tdf
+    Info (12023): Found entity 1: cmpr_f66 File: D:/intel_project/AX301/demo/15_sd_card_audio/db/cmpr_f66.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_f66" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|cmpr_f66:rdempty_eq_comp" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 81
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_64e.tdf
+    Info (12023): Found entity 1: cntr_64e File: D:/intel_project/AX301/demo/15_sd_card_audio/db/cntr_64e.tdf Line: 25
+Info (12128): Elaborating entity "cntr_64e" for hierarchy "sd_card_audio:sd_card_audio_m0|afifo_8i_32o_1024:audio_buf|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_crl1:auto_generated|cntr_64e:cntr_b" File: D:/intel_project/AX301/demo/15_sd_card_audio/db/dcfifo_crl1.tdf Line: 83
+Info (12128): Elaborating entity "wav_read" for hierarchy "sd_card_audio:sd_card_audio_m0|wav_read:wav_read_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v Line: 113
+Info (12128): Elaborating entity "sd_card_top" for hierarchy "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card_audio.v Line: 132
+Info (12128): Elaborating entity "sd_card_sec_read_write" for hierarchy "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_top.v Line: 109
+Info (12128): Elaborating entity "sd_card_cmd" for hierarchy "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_top.v Line: 136
+Info (12128): Elaborating entity "spi_master" for hierarchy "sd_card_audio:sd_card_audio_m0|sd_card_top:sd_card_top_m0|spi_master:spi_master_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_top.v Line: 153
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 96
+Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 109
+Info (13000): Registers with preset signals will power-up high File: D:/intel_project/AX301/demo/15_sd_card_audio/src/sd_card/sd_card_cmd.v Line: 99
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_data[7]" is stuck at VCC File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 46
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 24 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "wm8731_daclrc" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 34
+    Warning (15610): No output dependent on input pin "wm8731_adcdat" File: D:/intel_project/AX301/demo/15_sd_card_audio/src/top.v Line: 37
+Info (21057): Implemented 1424 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 1388 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 679 megabytes
+    Info: Processing ended: Tue Mar 20 15:31:54 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:29
+
+

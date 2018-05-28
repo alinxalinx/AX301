@@ -1,0 +1,5 @@
+PLL_Name	video_pll:video_pll_m0|altpll:altpll_component|video_pll_altpll:auto_generated|pll1
+PLLJITTER	29
+PLLSPEmax	84
+PLLSPEmin	-53
+

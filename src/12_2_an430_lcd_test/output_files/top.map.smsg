@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at color_bar.v(59): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: D:/intel_project/AX301/demo/12_2_an430_lcd_test/src/color_bar.v Line: 59
+Info (10281): Verilog HDL Declaration information at color_bar.v(63): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: D:/intel_project/AX301/demo/12_2_an430_lcd_test/src/color_bar.v Line: 63

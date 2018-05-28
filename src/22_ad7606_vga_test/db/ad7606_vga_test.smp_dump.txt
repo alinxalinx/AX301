@@ -1,0 +1,28 @@
+
+State Machine - |top|ad7606_sample:ad7606_sample_m1|state
+Name state.S_IDLE state.S_WAIT state.S_SAMPLE 
+state.S_IDLE 0 0 0 
+state.S_SAMPLE 1 0 1 
+state.S_WAIT 1 1 0 
+
+State Machine - |top|ad7606_sample:ad7606_sample_m0|state
+Name state.S_IDLE state.S_WAIT state.S_SAMPLE 
+state.S_IDLE 0 0 0 
+state.S_SAMPLE 1 0 1 
+state.S_WAIT 1 1 0 
+
+State Machine - |top|ad7606_if:ad7606_if_m0|state
+Name state.READ_DONE state.READ_CH8 state.READ_CH7 state.READ_CH6 state.READ_CH5 state.READ_CH4 state.READ_CH3 state.READ_CH2 state.READ_CH1 state.Wait_busy state.Wait_1 state.AD_CONV state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.AD_CONV 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.Wait_1 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.Wait_busy 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.READ_CH1 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.READ_CH2 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.READ_CH3 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.READ_CH4 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.READ_CH5 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.READ_CH6 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.READ_CH7 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.READ_CH8 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DONE 1 0 0 0 0 0 0 0 0 0 0 0 1 

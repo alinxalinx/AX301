@@ -1,0 +1,589 @@
+Analysis & Synthesis report for top
+Wed Mar 14 11:19:05 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top|ds1302_test:ds1302_test_m0|state
+  9. State Machine - |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|state
+ 10. State Machine - |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|state
+ 11. State Machine - |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0
+ 18. Port Connectivity Checks: "ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0"
+ 19. Port Connectivity Checks: "ds1302_test:ds1302_test_m0"
+ 20. Port Connectivity Checks: "seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Mar 14 11:19:05 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 315                                         ;
+;     Total combinational functions  ; 266                                         ;
+;     Dedicated logic registers      ; 201                                         ;
+; Total registers                    ; 201                                         ;
+; Total pins                         ; 19                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                                      ; top                ; top                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; src/seg_scan.v                   ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_scan.v    ;         ;
+; src/seg_decoder.v                ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_decoder.v ;         ;
+; src/seg_bcd.v                    ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_bcd.v     ;         ;
+; src/top.v                        ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/top.v         ;         ;
+; src/spi_master.v                 ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/spi_master.v  ;         ;
+; src/ds1302_test.v                ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302_test.v ;         ;
+; src/ds1302_io.v                  ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302_io.v   ;         ;
+; src/ds1302.v                     ; yes             ; User Verilog HDL File  ; D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v      ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 315       ;
+;                                             ;           ;
+; Total combinational functions               ; 266       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 130       ;
+;     -- 3 input functions                    ; 39        ;
+;     -- <=2 input functions                  ; 97        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 197       ;
+;     -- arithmetic mode                      ; 69        ;
+;                                             ;           ;
+; Total registers                             ; 201       ;
+;     -- Dedicated logic registers            ; 201       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 19        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 201       ;
+; Total fan-out                               ; 1618      ;
+; Average fan-out                             ; 3.20      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Entity Name ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+-------------+--------------+
+; |top                                   ; 266 (0)             ; 201 (0)                   ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |top                                                                                             ; top         ; work         ;
+;    |ds1302_test:ds1302_test_m0|        ; 142 (9)             ; 152 (8)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ds1302_test:ds1302_test_m0                                                                  ; ds1302_test ; work         ;
+;       |ds1302:ds1302_m0|               ; 133 (26)            ; 144 (53)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0                                                 ; ds1302      ; work         ;
+;          |ds1302_io:ds1302_io_m0|      ; 107 (50)            ; 91 (47)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0                          ; ds1302_io   ; work         ;
+;             |spi_master:spi_master_m0| ; 57 (57)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0 ; spi_master  ; work         ;
+;    |seg_bcd:seg_bcd_m0|                ; 124 (0)             ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0                                                                          ; seg_bcd     ; work         ;
+;       |seg_decoder:seg_decoder_m0|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m0                                               ; seg_decoder ; work         ;
+;       |seg_decoder:seg_decoder_m1|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m1                                               ; seg_decoder ; work         ;
+;       |seg_decoder:seg_decoder_m2|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m2                                               ; seg_decoder ; work         ;
+;       |seg_decoder:seg_decoder_m3|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m3                                               ; seg_decoder ; work         ;
+;       |seg_decoder:seg_decoder_m4|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m4                                               ; seg_decoder ; work         ;
+;       |seg_decoder:seg_decoder_m5|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m5                                               ; seg_decoder ; work         ;
+;       |seg_scan:seg_scan_m0|           ; 82 (82)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0                                                     ; seg_scan    ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_test:ds1302_test_m0|state                                              ;
++------------------+--------------+------------------+--------------+--------------+-----------------+
+; Name             ; state.S_WAIT ; state.S_WRITE_CH ; state.S_READ ; state.S_IDLE ; state.S_READ_CH ;
++------------------+--------------+------------------+--------------+--------------+-----------------+
+; state.S_IDLE     ; 0            ; 0                ; 0            ; 0            ; 0               ;
+; state.S_READ     ; 0            ; 0                ; 1            ; 1            ; 0               ;
+; state.S_READ_CH  ; 0            ; 0                ; 0            ; 1            ; 1               ;
+; state.S_WRITE_CH ; 0            ; 1                ; 0            ; 1            ; 0               ;
+; state.S_WAIT     ; 1            ; 0                ; 0            ; 1            ; 0               ;
++------------------+--------------+------------------+--------------+--------------+-----------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|state                                                                                                                                                                                                                                             ;
++-----------------+-----------------+-------------+-----------------+-----------------+----------------+-----------------+----------------+----------------+-----------------+-----------------+----------------+-----------------+----------------+----------------+---------------+--------------+-----------------+
+; Name            ; state.S_RD_DATE ; state.S_ACK ; state.S_RD_YEAR ; state.S_RD_WEEK ; state.S_RD_MON ; state.S_RD_HOUR ; state.S_RD_MIN ; state.S_RD_SEC ; state.S_WR_YEAR ; state.S_WR_WEEK ; state.S_WR_MON ; state.S_WR_HOUR ; state.S_WR_MIN ; state.S_WR_SEC ; state.S_WR_WP ; state.S_IDLE ; state.S_WR_DATE ;
++-----------------+-----------------+-------------+-----------------+-----------------+----------------+-----------------+----------------+----------------+-----------------+-----------------+----------------+-----------------+----------------+----------------+---------------+--------------+-----------------+
+; state.S_IDLE    ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 0            ; 0               ;
+; state.S_WR_WP   ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 1             ; 1            ; 0               ;
+; state.S_WR_SEC  ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 1              ; 0             ; 1            ; 0               ;
+; state.S_WR_MIN  ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 1              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_WR_HOUR ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 1               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_WR_MON  ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 1              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_WR_WEEK ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 1               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_WR_YEAR ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 1               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_SEC  ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 1              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_MIN  ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 1              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_HOUR ; 0               ; 0           ; 0               ; 0               ; 0              ; 1               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_MON  ; 0               ; 0           ; 0               ; 0               ; 1              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_WEEK ; 0               ; 0           ; 0               ; 1               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_YEAR ; 0               ; 0           ; 1               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_ACK     ; 0               ; 1           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_RD_DATE ; 1               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 0               ;
+; state.S_WR_DATE ; 0               ; 0           ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0               ; 0               ; 0              ; 0               ; 0              ; 0              ; 0             ; 1            ; 1               ;
++-----------------+-----------------+-------------+-----------------+-----------------+----------------+-----------------+----------------+----------------+-----------------+-----------------+----------------+-----------------+----------------+----------------+---------------+--------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|state                                                                                                       ;
++--------------------+-------------+----------------+--------------------+--------------------+---------------+-------------------+-------------------+--------------+-----------------+--------------+
+; Name               ; state.S_ACK ; state.S_CE_LOW ; state.S_WRITE_DATA ; state.S_WRITE_ADDR ; state.S_WRITE ; state.S_READ_DATA ; state.S_READ_ADDR ; state.S_READ ; state.S_CE_HIGH ; state.S_IDLE ;
++--------------------+-------------+----------------+--------------------+--------------------+---------------+-------------------+-------------------+--------------+-----------------+--------------+
+; state.S_IDLE       ; 0           ; 0              ; 0                  ; 0                  ; 0             ; 0                 ; 0                 ; 0            ; 0               ; 0            ;
+; state.S_CE_HIGH    ; 0           ; 0              ; 0                  ; 0                  ; 0             ; 0                 ; 0                 ; 0            ; 1               ; 1            ;
+; state.S_READ       ; 0           ; 0              ; 0                  ; 0                  ; 0             ; 0                 ; 0                 ; 1            ; 0               ; 1            ;
+; state.S_READ_ADDR  ; 0           ; 0              ; 0                  ; 0                  ; 0             ; 0                 ; 1                 ; 0            ; 0               ; 1            ;
+; state.S_READ_DATA  ; 0           ; 0              ; 0                  ; 0                  ; 0             ; 1                 ; 0                 ; 0            ; 0               ; 1            ;
+; state.S_WRITE      ; 0           ; 0              ; 0                  ; 0                  ; 1             ; 0                 ; 0                 ; 0            ; 0               ; 1            ;
+; state.S_WRITE_ADDR ; 0           ; 0              ; 0                  ; 1                  ; 0             ; 0                 ; 0                 ; 0            ; 0               ; 1            ;
+; state.S_WRITE_DATA ; 0           ; 0              ; 1                  ; 0                  ; 0             ; 0                 ; 0                 ; 0            ; 0               ; 1            ;
+; state.S_CE_LOW     ; 0           ; 1              ; 0                  ; 0                  ; 0             ; 0                 ; 0                 ; 0            ; 0               ; 1            ;
+; state.S_ACK        ; 1           ; 0              ; 0                  ; 0                  ; 0             ; 0                 ; 0                 ; 0            ; 0               ; 1            ;
++--------------------+-------------+----------------+--------------------+--------------------+---------------+-------------------+-------------------+--------------+-----------------+--------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|state      ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+; Name                  ; state.ACK_WAIT ; state.LAST_HALF_CYCLE ; state.ACK ; state.DCLK_IDLE ; state.DCLK_EDGE ; state.IDLE ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+; state.IDLE            ; 0              ; 0                     ; 0         ; 0               ; 0               ; 0          ;
+; state.DCLK_EDGE       ; 0              ; 0                     ; 0         ; 0               ; 1               ; 1          ;
+; state.DCLK_IDLE       ; 0              ; 0                     ; 0         ; 1               ; 0               ; 1          ;
+; state.ACK             ; 0              ; 0                     ; 1         ; 0               ; 0               ; 1          ;
+; state.LAST_HALF_CYCLE ; 0              ; 1                     ; 0         ; 0               ; 0               ; 1          ;
+; state.ACK_WAIT        ; 1              ; 0                     ; 0         ; 0               ; 0               ; 1          ;
++-----------------------+----------------+-----------------------+-----------+-----------------+-----------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; Register name                                                                                       ; Reason for Removal                                                                          ;
++-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_addr[4..6]                                        ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_year_reg[0]                                                        ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_second_reg[1..7]                                                   ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_minute_reg[0..3,5..7]                                              ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_hour_reg[2,3,5..7]                                                 ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_date_reg[2,3,5..7]                                                 ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_month_reg[0,2,3,5..7]                                              ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_week_reg[0,2..7]                                                   ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_year_reg[3,5..7]                                                   ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|read_addr[4..6]                                         ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_data[3,5..7]                                      ; Stuck at GND due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|write_year_reg[1]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_year_reg[2]                                    ;
+; ds1302_test:ds1302_test_m0|write_year_reg[2]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_year_reg[4]                                    ;
+; ds1302_test:ds1302_test_m0|write_year_reg[4]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_week_reg[1]                                    ;
+; ds1302_test:ds1302_test_m0|write_week_reg[1]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_month_reg[1]                                   ;
+; ds1302_test:ds1302_test_m0|write_month_reg[1]                                                       ; Merged with ds1302_test:ds1302_test_m0|write_month_reg[4]                                   ;
+; ds1302_test:ds1302_test_m0|write_month_reg[4]                                                       ; Merged with ds1302_test:ds1302_test_m0|write_date_reg[0]                                    ;
+; ds1302_test:ds1302_test_m0|write_date_reg[0]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_date_reg[1]                                    ;
+; ds1302_test:ds1302_test_m0|write_date_reg[1]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_date_reg[4]                                    ;
+; ds1302_test:ds1302_test_m0|write_date_reg[4]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_hour_reg[0]                                    ;
+; ds1302_test:ds1302_test_m0|write_hour_reg[0]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_hour_reg[1]                                    ;
+; ds1302_test:ds1302_test_m0|write_hour_reg[1]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_hour_reg[4]                                    ;
+; ds1302_test:ds1302_test_m0|write_hour_reg[4]                                                        ; Merged with ds1302_test:ds1302_test_m0|write_minute_reg[4]                                  ;
+; ds1302_test:ds1302_test_m0|write_minute_reg[4]                                                      ; Merged with ds1302_test:ds1302_test_m0|write_second_reg[0]                                  ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|send_data[1]                     ; Merged with ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|send_data[2] ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|send_data[2]                     ; Stuck at GND due to stuck port data_in                                                      ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[7]                                                 ; Stuck at VCC due to stuck port data_in                                                      ;
+; ds1302_test:ds1302_test_m0|state~4                                                                  ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|state~6                                                                  ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|state~4                                                 ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|state~5                                                 ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|state~6                                                 ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|state~7                                                 ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|state~4                          ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|state~5                          ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|state~6                          ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|state~7                          ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|state~4 ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|state~5 ; Lost fanout                                                                                 ;
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|state~6 ; Lost fanout                                                                                 ;
+; Total Number of Removed Registers = 81                                                              ;                                                                                             ;
++-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
++-----------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; Register name                                             ; Reason for Removal        ; Registers Removed due to This Register                                          ;
++-----------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_addr[5] ; Stuck at GND              ; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|send_data[2] ;
+;                                                           ; due to stuck port data_in ;                                                                                 ;
+; ds1302_test:ds1302_test_m0|write_second_reg[7]            ; Stuck at GND              ; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_data[7]                       ;
+;                                                           ; due to stuck port data_in ;                                                                                 ;
+; ds1302_test:ds1302_test_m0|write_second_reg[6]            ; Stuck at GND              ; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_data[6]                       ;
+;                                                           ; due to stuck port data_in ;                                                                                 ;
+; ds1302_test:ds1302_test_m0|write_second_reg[5]            ; Stuck at GND              ; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_data[5]                       ;
+;                                                           ; due to stuck port data_in ;                                                                                 ;
+; ds1302_test:ds1302_test_m0|write_second_reg[3]            ; Stuck at GND              ; ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|write_data[3]                       ;
+;                                                           ; due to stuck port data_in ;                                                                                 ;
++-----------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 201   ;
+; Number of registers using Synchronous Clear  ; 76    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 199   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 76    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Inverted Register Statistics                                  ;
++-----------------------------------------------------+---------+
+; Inverted Register                                   ; Fan out ;
++-----------------------------------------------------+---------+
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_sel[0]  ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_sel[1]  ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_sel[2]  ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_sel[3]  ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_sel[4]  ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_sel[5]  ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[0] ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[1] ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[2] ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[3] ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[4] ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[5] ; 1       ;
+; seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[6] ; 1       ;
+; Total number of inverted registers = 13             ;         ;
++-----------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|clk_edge_cnt[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|MOSI_shift[2]   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|MOSI_shift[6]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0|MISO_shift[7]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|send_data[7]                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|send_data[6]                             ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0|seg_data[6]                                                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|next_state.S_WRITE                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0 ;
++----------------+----------+----------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                     ;
++----------------+----------+----------------------------------------------------------+
+; SCAN_FREQ      ; 200      ; Signed Integer                                           ;
+; CLK_FREQ       ; 50000000 ; Signed Integer                                           ;
+; SCAN_COUNT     ; 41665    ; Signed Integer                                           ;
++----------------+----------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0" ;
++----------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type  ; Severity ; Details                                                                             ;
++----------------+-------+----------+-------------------------------------------------------------------------------------+
+; CPOL           ; Input ; Info     ; Stuck at GND                                                                        ;
+; CPHA           ; Input ; Info     ; Stuck at GND                                                                        ;
+; clk_div[5..4]  ; Input ; Info     ; Stuck at VCC                                                                        ;
+; clk_div[15..6] ; Input ; Info     ; Stuck at GND                                                                        ;
+; clk_div[3..2]  ; Input ; Info     ; Stuck at GND                                                                        ;
+; clk_div[1]     ; Input ; Info     ; Stuck at VCC                                                                        ;
+; clk_div[0]     ; Input ; Info     ; Stuck at GND                                                                        ;
++----------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ds1302_test:ds1302_test_m0"                                                               ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; read_date  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; read_month ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; read_week  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; read_year  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0" ;
++---------------+-------+----------+----------------------------------+
+; Port          ; Type  ; Severity ; Details                          ;
++---------------+-------+----------+----------------------------------+
+; seg_data_0[7] ; Input ; Info     ; Stuck at VCC                     ;
+; seg_data_1[7] ; Input ; Info     ; Stuck at VCC                     ;
+; seg_data_2[7] ; Input ; Info     ; Stuck at VCC                     ;
+; seg_data_3[7] ; Input ; Info     ; Stuck at VCC                     ;
+; seg_data_4[7] ; Input ; Info     ; Stuck at VCC                     ;
+; seg_data_5[7] ; Input ; Info     ; Stuck at VCC                     ;
++---------------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 19                          ;
+; cycloneiii_ff         ; 201                         ;
+;     CLR               ; 51                          ;
+;     CLR SCLR          ; 71                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 71                          ;
+;     ENA CLR SCLR      ; 5                           ;
+;     plain             ; 2                           ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 280                         ;
+;     arith             ; 69                          ;
+;         2 data inputs ; 69                          ;
+;     normal            ; 211                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 130                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.48                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Mar 14 11:18:51 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/seg_scan.v
+    Info (12023): Found entity 1: seg_scan File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_scan.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/seg_decoder.v
+    Info (12023): Found entity 1: seg_decoder File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_decoder.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/seg_bcd.v
+    Info (12023): Found entity 1: seg_bcd File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_bcd.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/top.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/spi_master.v
+    Info (12023): Found entity 1: spi_master File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/spi_master.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/ds1302_test.v
+    Info (12023): Found entity 1: ds1302_test File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302_test.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file src/ds1302_io.v
+    Info (12023): Found entity 1: ds1302_io File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302_io.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file src/ds1302.v
+    Info (12023): Found entity 1: ds1302 File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v Line: 29
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "seg_bcd" for hierarchy "seg_bcd:seg_bcd_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/top.v Line: 53
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_bcd:seg_bcd_m0|seg_decoder:seg_decoder_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_bcd.v Line: 32
+Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_bcd:seg_bcd_m0|seg_scan:seg_scan_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_bcd.v Line: 82
+Info (12128): Elaborating entity "ds1302_test" for hierarchy "ds1302_test:ds1302_test_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/top.v Line: 67
+Info (12128): Elaborating entity "ds1302" for hierarchy "ds1302_test:ds1302_test_m0|ds1302:ds1302_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302_test.v Line: 92
+Info (10264): Verilog HDL Case Statement information at ds1302.v(91): all case item expressions in this case statement are onehot File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v Line: 91
+Info (10264): Verilog HDL Case Statement information at ds1302.v(110): all case item expressions in this case statement are onehot File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v Line: 110
+Info (10264): Verilog HDL Case Statement information at ds1302.v(176): all case item expressions in this case statement are onehot File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v Line: 176
+Info (10264): Verilog HDL Case Statement information at ds1302.v(203): all case item expressions in this case statement are onehot File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v Line: 203
+Info (12128): Elaborating entity "ds1302_io" for hierarchy "ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302.v Line: 364
+Info (12128): Elaborating entity "spi_master" for hierarchy "ds1302_test:ds1302_test_m0|ds1302:ds1302_m0|ds1302_io:ds1302_io_m0|spi_master:spi_master_m0" File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/ds1302_io.v Line: 196
+Info (13000): Registers with preset signals will power-up high File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/seg_scan.v Line: 77
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_data[7]" is stuck at VCC File: D:/intel_project/AX301/demo/09_rtc_ds1302/src/top.v Line: 38
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 334 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 315 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 659 megabytes
+    Info: Processing ended: Wed Mar 14 11:19:05 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
+
+

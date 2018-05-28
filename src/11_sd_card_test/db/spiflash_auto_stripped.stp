@@ -1,0 +1,433 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: 10CL006(Y|Z)/10CL010(Y|Z)/.. (0x020F10DD)" sof_file="../output_files/sd_card_test.sof">
+  <display_tree gui_logging_enabled="1">
+    <display_branch instance="auto_signaltap_0" signal_set="signal_set: 2018/03/20 14:32:12  #0" trigger="trigger: 2018/03/20 14:32:12  #1"/>
+  </display_tree>
+  <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <signal_set is_expanded="true" name="signal_set: 2018/03/20 14:32:12  #0">
+      <clock name="clk" polarity="posedge" tap_mode="classic"/>
+      <config pipeline_level="0" ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="2048" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="ax_debounce:ax_debounce_m0|button_negedge" tap_mode="classic"/>
+          <wire name="rd_cnt[0]" tap_mode="classic"/>
+          <wire name="rd_cnt[1]" tap_mode="classic"/>
+          <wire name="rd_cnt[2]" tap_mode="classic"/>
+          <wire name="rd_cnt[3]" tap_mode="classic"/>
+          <wire name="rd_cnt[4]" tap_mode="classic"/>
+          <wire name="rd_cnt[5]" tap_mode="classic"/>
+          <wire name="rd_cnt[6]" tap_mode="classic"/>
+          <wire name="rd_cnt[7]" tap_mode="classic"/>
+          <wire name="rd_cnt[8]" tap_mode="classic"/>
+          <wire name="rd_cnt[9]" tap_mode="classic"/>
+          <wire name="read_data[0]" tap_mode="classic"/>
+          <wire name="read_data[1]" tap_mode="classic"/>
+          <wire name="read_data[2]" tap_mode="classic"/>
+          <wire name="read_data[3]" tap_mode="classic"/>
+          <wire name="read_data[4]" tap_mode="classic"/>
+          <wire name="read_data[5]" tap_mode="classic"/>
+          <wire name="read_data[6]" tap_mode="classic"/>
+          <wire name="read_data[7]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[0]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[1]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[2]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[3]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[4]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[5]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[6]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_wr_ack" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_DATA" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_PRE" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_END" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_ERR" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_INIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_ACK" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_WAIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WAIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_ACK" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_CRC" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_0" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_1" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_read_req_ack" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_init_done" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_read_data_valid" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_read_end" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_write_end" tap_mode="classic"/>
+          <wire name="sd_sec_read" tap_mode="classic"/>
+          <wire name="sd_sec_write" tap_mode="classic"/>
+          <wire name="state.S_END" tap_mode="classic"/>
+          <wire name="state.S_IDLE" tap_mode="classic"/>
+          <wire name="state.S_READ" tap_mode="classic"/>
+          <wire name="state.S_WRITE" tap_mode="classic"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="ax_debounce:ax_debounce_m0|button_negedge" tap_mode="classic"/>
+          <wire name="rd_cnt[0]" tap_mode="classic"/>
+          <wire name="rd_cnt[1]" tap_mode="classic"/>
+          <wire name="rd_cnt[2]" tap_mode="classic"/>
+          <wire name="rd_cnt[3]" tap_mode="classic"/>
+          <wire name="rd_cnt[4]" tap_mode="classic"/>
+          <wire name="rd_cnt[5]" tap_mode="classic"/>
+          <wire name="rd_cnt[6]" tap_mode="classic"/>
+          <wire name="rd_cnt[7]" tap_mode="classic"/>
+          <wire name="rd_cnt[8]" tap_mode="classic"/>
+          <wire name="rd_cnt[9]" tap_mode="classic"/>
+          <wire name="read_data[0]" tap_mode="classic"/>
+          <wire name="read_data[1]" tap_mode="classic"/>
+          <wire name="read_data[2]" tap_mode="classic"/>
+          <wire name="read_data[3]" tap_mode="classic"/>
+          <wire name="read_data[4]" tap_mode="classic"/>
+          <wire name="read_data[5]" tap_mode="classic"/>
+          <wire name="read_data[6]" tap_mode="classic"/>
+          <wire name="read_data[7]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[0]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[1]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[2]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[3]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[4]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[5]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[6]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_wr_ack" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_DATA" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_PRE" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_END" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_ERR" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_INIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_ACK" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_WAIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WAIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_ACK" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_CRC" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_0" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_1" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_read_req_ack" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_init_done" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_read_data_valid" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_read_end" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_write_end" tap_mode="classic"/>
+          <wire name="sd_sec_read" tap_mode="classic"/>
+          <wire name="sd_sec_write" tap_mode="classic"/>
+          <wire name="state.S_END" tap_mode="classic"/>
+          <wire name="state.S_IDLE" tap_mode="classic"/>
+          <wire name="state.S_READ" tap_mode="classic"/>
+          <wire name="state.S_WRITE" tap_mode="classic"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="ax_debounce:ax_debounce_m0|button_negedge" tap_mode="classic"/>
+          <wire name="rd_cnt[0]" tap_mode="classic"/>
+          <wire name="rd_cnt[1]" tap_mode="classic"/>
+          <wire name="rd_cnt[2]" tap_mode="classic"/>
+          <wire name="rd_cnt[3]" tap_mode="classic"/>
+          <wire name="rd_cnt[4]" tap_mode="classic"/>
+          <wire name="rd_cnt[5]" tap_mode="classic"/>
+          <wire name="rd_cnt[6]" tap_mode="classic"/>
+          <wire name="rd_cnt[7]" tap_mode="classic"/>
+          <wire name="rd_cnt[8]" tap_mode="classic"/>
+          <wire name="rd_cnt[9]" tap_mode="classic"/>
+          <wire name="read_data[0]" tap_mode="classic"/>
+          <wire name="read_data[1]" tap_mode="classic"/>
+          <wire name="read_data[2]" tap_mode="classic"/>
+          <wire name="read_data[3]" tap_mode="classic"/>
+          <wire name="read_data[4]" tap_mode="classic"/>
+          <wire name="read_data[5]" tap_mode="classic"/>
+          <wire name="read_data[6]" tap_mode="classic"/>
+          <wire name="read_data[7]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[0]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[1]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[2]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[3]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[4]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[5]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[6]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7]" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_wr_ack" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_DATA" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_PRE" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_END" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_ERR" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_INIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_ACK" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_WAIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WAIT" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_ACK" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_CRC" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_0" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_1" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_read_req_ack" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_init_done" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_read_data_valid" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_read_end" tap_mode="classic"/>
+          <wire name="sd_card_top:sd_card_top_m0|sd_sec_write_end" tap_mode="classic"/>
+          <wire name="sd_sec_read" tap_mode="classic"/>
+          <wire name="sd_sec_write" tap_mode="classic"/>
+          <wire name="state.S_END" tap_mode="classic"/>
+          <wire name="state.S_IDLE" tap_mode="classic"/>
+          <wire name="state.S_READ" tap_mode="classic"/>
+          <wire name="state.S_WRITE" tap_mode="classic"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <unified_setup_data_view>
+          <node data_index="42" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_END" storage_index="42" tap_mode="classic" trigger_index="42" type="unknown"/>
+          <node data_index="43" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_IDLE" storage_index="43" tap_mode="classic" trigger_index="43" type="unknown"/>
+          <node data_index="44" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_READ" storage_index="44" tap_mode="classic" trigger_index="44" type="unknown"/>
+          <node data_index="45" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_WRITE" storage_index="45" tap_mode="classic" trigger_index="45" type="unknown"/>
+          <node data_index="36" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_init_done" storage_index="36" tap_mode="classic" trigger_index="36" type="unknown"/>
+          <node data_index="39" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_write_end" storage_index="39" tap_mode="classic" trigger_index="39" type="unknown"/>
+          <node data_index="38" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_read_end" storage_index="38" tap_mode="classic" trigger_index="38" type="unknown"/>
+          <node data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="rising edge" name="ax_debounce:ax_debounce_m0|button_negedge" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <node is_selected="false" level-0="alt_or" name="read_data[7..0]" order="msb_to_lsb" type="register">
+            <node data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[7]" storage_index="18" tap_mode="classic" trigger_index="18" type="unknown"/>
+            <node data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[6]" storage_index="17" tap_mode="classic" trigger_index="17" type="unknown"/>
+            <node data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[5]" storage_index="16" tap_mode="classic" trigger_index="16" type="unknown"/>
+            <node data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[4]" storage_index="15" tap_mode="classic" trigger_index="15" type="unknown"/>
+            <node data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[3]" storage_index="14" tap_mode="classic" trigger_index="14" type="unknown"/>
+            <node data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[2]" storage_index="13" tap_mode="classic" trigger_index="13" type="unknown"/>
+            <node data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[1]" storage_index="12" tap_mode="classic" trigger_index="12" type="unknown"/>
+            <node data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[0]" storage_index="11" tap_mode="classic" trigger_index="11" type="unknown"/>
+          </node>
+          <node data_index="37" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_read_data_valid" storage_index="37" tap_mode="classic" trigger_index="37" type="unknown"/>
+          <node is_selected="false" level-0="alt_or" name="rd_cnt[9..0]" order="msb_to_lsb" type="register">
+            <node data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[9]" storage_index="10" tap_mode="classic" trigger_index="10" type="unknown"/>
+            <node data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[8]" storage_index="9" tap_mode="classic" trigger_index="9" type="unknown"/>
+            <node data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[7]" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+            <node data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[6]" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+            <node data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[5]" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+            <node data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[4]" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+            <node data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[3]" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+            <node data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[2]" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+            <node data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[1]" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+            <node data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[0]" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          </node>
+          <node data_index="40" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_sec_read" storage_index="40" tap_mode="classic" trigger_index="40" type="unknown"/>
+          <node data_index="41" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_sec_write" storage_index="41" tap_mode="classic" trigger_index="41" type="unknown"/>
+          <node data_index="35" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_read_req_ack" storage_index="35" tap_mode="classic" trigger_index="35" type="unknown"/>
+          <node data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD" storage_index="19" tap_mode="classic" trigger_index="19" type="unknown"/>
+          <node data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_DATA" storage_index="20" tap_mode="classic" trigger_index="20" type="unknown"/>
+          <node data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_PRE" storage_index="21" tap_mode="classic" trigger_index="21" type="unknown"/>
+          <node data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_END" storage_index="22" tap_mode="classic" trigger_index="22" type="unknown"/>
+          <node data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_ERR" storage_index="23" tap_mode="classic" trigger_index="23" type="unknown"/>
+          <node data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE" storage_index="24" tap_mode="classic" trigger_index="24" type="unknown"/>
+          <node data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_INIT" storage_index="25" tap_mode="classic" trigger_index="25" type="unknown"/>
+          <node data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ" storage_index="26" tap_mode="classic" trigger_index="26" type="unknown"/>
+          <node data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_ACK" storage_index="27" tap_mode="classic" trigger_index="27" type="unknown"/>
+          <node data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_WAIT" storage_index="28" tap_mode="classic" trigger_index="28" type="unknown"/>
+          <node data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WAIT" storage_index="29" tap_mode="classic" trigger_index="29" type="unknown"/>
+          <node data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_ACK" storage_index="30" tap_mode="classic" trigger_index="30" type="unknown"/>
+          <node data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_CRC" storage_index="31" tap_mode="classic" trigger_index="31" type="unknown"/>
+          <node data_index="32" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_0" storage_index="32" tap_mode="classic" trigger_index="32" type="unknown"/>
+          <node data_index="33" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_1" storage_index="33" tap_mode="classic" trigger_index="33" type="unknown"/>
+          <node data_index="34" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN" storage_index="34" tap_mode="classic" trigger_index="34" type="unknown"/>
+          <node is_selected="false" level-0="alt_or" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7..0]" order="msb_to_lsb" type="combinatorial">
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[6]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[5]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[4]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[3]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[2]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[1]" tap_mode="classic" type="combinatorial"/>
+            <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[0]" tap_mode="classic" type="combinatorial"/>
+          </node>
+          <node duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_wr_ack" tap_mode="classic" type="combinatorial"/>
+        </unified_setup_data_view>
+        <data_view>
+          <net data_index="51" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_END" storage_index="51" tap_mode="classic" trigger_index="51" type="unknown"/>
+          <net data_index="52" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_IDLE" storage_index="52" tap_mode="classic" trigger_index="52" type="unknown"/>
+          <net data_index="53" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_READ" storage_index="53" tap_mode="classic" trigger_index="53" type="unknown"/>
+          <net data_index="54" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_WRITE" storage_index="54" tap_mode="classic" trigger_index="54" type="unknown"/>
+          <net data_index="45" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_init_done" storage_index="45" tap_mode="classic" trigger_index="45" type="unknown"/>
+          <net data_index="48" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_write_end" storage_index="48" tap_mode="classic" trigger_index="48" type="unknown"/>
+          <net data_index="47" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_read_end" storage_index="47" tap_mode="classic" trigger_index="47" type="unknown"/>
+          <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="rising edge" name="ax_debounce:ax_debounce_m0|button_negedge" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="read_data[7..0]" order="msb_to_lsb" type="register">
+            <net data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[7]" storage_index="18" tap_mode="classic" trigger_index="18" type="unknown"/>
+            <net data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[6]" storage_index="17" tap_mode="classic" trigger_index="17" type="unknown"/>
+            <net data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[5]" storage_index="16" tap_mode="classic" trigger_index="16" type="unknown"/>
+            <net data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[4]" storage_index="15" tap_mode="classic" trigger_index="15" type="unknown"/>
+            <net data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[3]" storage_index="14" tap_mode="classic" trigger_index="14" type="unknown"/>
+            <net data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[2]" storage_index="13" tap_mode="classic" trigger_index="13" type="unknown"/>
+            <net data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[1]" storage_index="12" tap_mode="classic" trigger_index="12" type="unknown"/>
+            <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[0]" storage_index="11" tap_mode="classic" trigger_index="11" type="unknown"/>
+          </bus>
+          <net data_index="46" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_read_data_valid" storage_index="46" tap_mode="classic" trigger_index="46" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="rd_cnt[9..0]" order="msb_to_lsb" type="register">
+            <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[9]" storage_index="10" tap_mode="classic" trigger_index="10" type="unknown"/>
+            <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[8]" storage_index="9" tap_mode="classic" trigger_index="9" type="unknown"/>
+            <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[7]" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+            <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[6]" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+            <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[5]" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+            <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[4]" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+            <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[3]" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+            <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[2]" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+            <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[1]" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+            <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[0]" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          </bus>
+          <net data_index="49" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_sec_read" storage_index="49" tap_mode="classic" trigger_index="49" type="unknown"/>
+          <net data_index="50" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_sec_write" storage_index="50" tap_mode="classic" trigger_index="50" type="unknown"/>
+          <net data_index="44" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_read_req_ack" storage_index="44" tap_mode="classic" trigger_index="44" type="unknown"/>
+          <net data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD" storage_index="28" tap_mode="classic" trigger_index="28" type="unknown"/>
+          <net data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_DATA" storage_index="29" tap_mode="classic" trigger_index="29" type="unknown"/>
+          <net data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_PRE" storage_index="30" tap_mode="classic" trigger_index="30" type="unknown"/>
+          <net data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_END" storage_index="31" tap_mode="classic" trigger_index="31" type="unknown"/>
+          <net data_index="32" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_ERR" storage_index="32" tap_mode="classic" trigger_index="32" type="unknown"/>
+          <net data_index="33" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE" storage_index="33" tap_mode="classic" trigger_index="33" type="unknown"/>
+          <net data_index="34" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_INIT" storage_index="34" tap_mode="classic" trigger_index="34" type="unknown"/>
+          <net data_index="35" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ" storage_index="35" tap_mode="classic" trigger_index="35" type="unknown"/>
+          <net data_index="36" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_ACK" storage_index="36" tap_mode="classic" trigger_index="36" type="unknown"/>
+          <net data_index="37" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_WAIT" storage_index="37" tap_mode="classic" trigger_index="37" type="unknown"/>
+          <net data_index="38" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WAIT" storage_index="38" tap_mode="classic" trigger_index="38" type="unknown"/>
+          <net data_index="39" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_ACK" storage_index="39" tap_mode="classic" trigger_index="39" type="unknown"/>
+          <net data_index="40" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_CRC" storage_index="40" tap_mode="classic" trigger_index="40" type="unknown"/>
+          <net data_index="41" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_0" storage_index="41" tap_mode="classic" trigger_index="41" type="unknown"/>
+          <net data_index="42" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_1" storage_index="42" tap_mode="classic" trigger_index="42" type="unknown"/>
+          <net data_index="43" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN" storage_index="43" tap_mode="classic" trigger_index="43" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7..0]" order="msb_to_lsb" type="combinatorial">
+            <net data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7]" storage_index="26" tap_mode="classic" trigger_index="26" type="unknown"/>
+            <net data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[6]" storage_index="25" tap_mode="classic" trigger_index="25" type="unknown"/>
+            <net data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[5]" storage_index="24" tap_mode="classic" trigger_index="24" type="unknown"/>
+            <net data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[4]" storage_index="23" tap_mode="classic" trigger_index="23" type="unknown"/>
+            <net data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[3]" storage_index="22" tap_mode="classic" trigger_index="22" type="unknown"/>
+            <net data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[2]" storage_index="21" tap_mode="classic" trigger_index="21" type="unknown"/>
+            <net data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[1]" storage_index="20" tap_mode="classic" trigger_index="20" type="unknown"/>
+            <net data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[0]" storage_index="19" tap_mode="classic" trigger_index="19" type="unknown"/>
+          </bus>
+          <net data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_wr_ack" storage_index="27" tap_mode="classic" trigger_index="27" type="unknown"/>
+        </data_view>
+        <setup_view>
+          <net data_index="51" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_END" storage_index="51" tap_mode="classic" trigger_index="51" type="unknown"/>
+          <net data_index="52" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_IDLE" storage_index="52" tap_mode="classic" trigger_index="52" type="unknown"/>
+          <net data_index="53" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_READ" storage_index="53" tap_mode="classic" trigger_index="53" type="unknown"/>
+          <net data_index="54" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="state.S_WRITE" storage_index="54" tap_mode="classic" trigger_index="54" type="unknown"/>
+          <net data_index="45" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_init_done" storage_index="45" tap_mode="classic" trigger_index="45" type="unknown"/>
+          <net data_index="48" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_write_end" storage_index="48" tap_mode="classic" trigger_index="48" type="unknown"/>
+          <net data_index="47" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_read_end" storage_index="47" tap_mode="classic" trigger_index="47" type="unknown"/>
+          <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="rising edge" name="ax_debounce:ax_debounce_m0|button_negedge" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="read_data[7..0]" order="msb_to_lsb" type="register">
+            <net data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[7]" storage_index="18" tap_mode="classic" trigger_index="18" type="unknown"/>
+            <net data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[6]" storage_index="17" tap_mode="classic" trigger_index="17" type="unknown"/>
+            <net data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[5]" storage_index="16" tap_mode="classic" trigger_index="16" type="unknown"/>
+            <net data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[4]" storage_index="15" tap_mode="classic" trigger_index="15" type="unknown"/>
+            <net data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[3]" storage_index="14" tap_mode="classic" trigger_index="14" type="unknown"/>
+            <net data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[2]" storage_index="13" tap_mode="classic" trigger_index="13" type="unknown"/>
+            <net data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[1]" storage_index="12" tap_mode="classic" trigger_index="12" type="unknown"/>
+            <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="read_data[0]" storage_index="11" tap_mode="classic" trigger_index="11" type="unknown"/>
+          </bus>
+          <net data_index="46" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_sec_read_data_valid" storage_index="46" tap_mode="classic" trigger_index="46" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="rd_cnt[9..0]" order="msb_to_lsb" type="register">
+            <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[9]" storage_index="10" tap_mode="classic" trigger_index="10" type="unknown"/>
+            <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[8]" storage_index="9" tap_mode="classic" trigger_index="9" type="unknown"/>
+            <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[7]" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+            <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[6]" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+            <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[5]" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+            <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[4]" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+            <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[3]" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+            <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[2]" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+            <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[1]" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+            <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="rd_cnt[0]" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          </bus>
+          <net data_index="49" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_sec_read" storage_index="49" tap_mode="classic" trigger_index="49" type="unknown"/>
+          <net data_index="50" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_sec_write" storage_index="50" tap_mode="classic" trigger_index="50" type="unknown"/>
+          <net data_index="44" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_sec_read_write:sd_card_sec_read_write_m0|block_read_req_ack" storage_index="44" tap_mode="classic" trigger_index="44" type="unknown"/>
+          <net data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD" storage_index="28" tap_mode="classic" trigger_index="28" type="unknown"/>
+          <net data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_DATA" storage_index="29" tap_mode="classic" trigger_index="29" type="unknown"/>
+          <net data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_CMD_PRE" storage_index="30" tap_mode="classic" trigger_index="30" type="unknown"/>
+          <net data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_END" storage_index="31" tap_mode="classic" trigger_index="31" type="unknown"/>
+          <net data_index="32" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_ERR" storage_index="32" tap_mode="classic" trigger_index="32" type="unknown"/>
+          <net data_index="33" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_IDLE" storage_index="33" tap_mode="classic" trigger_index="33" type="unknown"/>
+          <net data_index="34" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_INIT" storage_index="34" tap_mode="classic" trigger_index="34" type="unknown"/>
+          <net data_index="35" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ" storage_index="35" tap_mode="classic" trigger_index="35" type="unknown"/>
+          <net data_index="36" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_ACK" storage_index="36" tap_mode="classic" trigger_index="36" type="unknown"/>
+          <net data_index="37" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_READ_WAIT" storage_index="37" tap_mode="classic" trigger_index="37" type="unknown"/>
+          <net data_index="38" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WAIT" storage_index="38" tap_mode="classic" trigger_index="38" type="unknown"/>
+          <net data_index="39" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_ACK" storage_index="39" tap_mode="classic" trigger_index="39" type="unknown"/>
+          <net data_index="40" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_CRC" storage_index="40" tap_mode="classic" trigger_index="40" type="unknown"/>
+          <net data_index="41" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_0" storage_index="41" tap_mode="classic" trigger_index="41" type="unknown"/>
+          <net data_index="42" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_DATA_1" storage_index="42" tap_mode="classic" trigger_index="42" type="unknown"/>
+          <net data_index="43" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|state.S_WRITE_TOKEN" storage_index="43" tap_mode="classic" trigger_index="43" type="unknown"/>
+          <bus is_selected="false" level-0="alt_or" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7..0]" order="msb_to_lsb" type="combinatorial">
+            <net data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[7]" storage_index="26" tap_mode="classic" trigger_index="26" type="unknown"/>
+            <net data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[6]" storage_index="25" tap_mode="classic" trigger_index="25" type="unknown"/>
+            <net data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[5]" storage_index="24" tap_mode="classic" trigger_index="24" type="unknown"/>
+            <net data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[4]" storage_index="23" tap_mode="classic" trigger_index="23" type="unknown"/>
+            <net data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[3]" storage_index="22" tap_mode="classic" trigger_index="22" type="unknown"/>
+            <net data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[2]" storage_index="21" tap_mode="classic" trigger_index="21" type="unknown"/>
+            <net data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[1]" storage_index="20" tap_mode="classic" trigger_index="20" type="unknown"/>
+            <net data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_data_out[0]" storage_index="19" tap_mode="classic" trigger_index="19" type="unknown"/>
+          </bus>
+          <net data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="sd_card_top:sd_card_top_m0|sd_card_cmd:sd_card_cmd_m0|spi_wr_ack" storage_index="27" tap_mode="classic" trigger_index="27" type="unknown"/>
+        </setup_view>
+        <trigger_in_editor/>
+        <trigger_out_editor/>
+      </presentation>
+      <trigger CRC="D6550A8E" attribute_mem_mode="false" gap_record="true" is_expanded="true" name="trigger: 2018/03/20 14:32:12  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">'ax_debounce:ax_debounce_m0|button_negedge' == rising edge
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>1111111111111111111111111111111111111111111111111111111
+            <pwr_up_transitional>1111111111111111111111111111111111111111111111111111111</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="10"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="129024"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <single attribute="lock mode" value="0"/>
+    <multi attribute="frame size" size="2" value="1920,1017"/>
+    <multi attribute="jtag widget size" size="2" value="398,135"/>
+  </global_info>
+</session>

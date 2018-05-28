@@ -1,0 +1,5 @@
+
+State Machine - |buzzer_pwm_test|state
+Name state.BUZZER 
+state.IDLE 0 
+state.BUZZER 1 

@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "vga_out_hs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_vs",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_out_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ad9226_data_ch0[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

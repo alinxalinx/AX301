@@ -1,0 +1,7 @@
+
+State Machine - |music_top|state
+Name state.PLAY_END state.PLAY_WAIT state.PLAY state.IDLE 
+state.IDLE 0 0 0 0 
+state.PLAY 0 0 1 1 
+state.PLAY_WAIT 0 1 0 1 
+state.PLAY_END 1 0 0 1 

@@ -1,0 +1,121 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "lcd_hs",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_vs",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_de",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

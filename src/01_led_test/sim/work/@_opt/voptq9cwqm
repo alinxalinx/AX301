@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\AX301\02_demo\01_led_test\sim
+T_opt
+V28i0JYk4`Qj83OccTZ`]m1
+04 11 4 work led_test_tb fast 0
+=1-1c872c479142-599d75f0-3dc-12a0
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1c;51
+vled_test
+I2JL>jJG5oQ28KL@gBcHS00
+VQ1eTR5_5BbOzzbJKi0fN]2
+Z1 dD:\AX301\02_demo\01_led_test\sim
+w1501121932
+8../led_test.v
+F../led_test.v
+L0 31
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 lT=zXFQOGm]olGNE84cEh1
+!s85 0
+!s108 1503491568.657000
+!s107 ../led_test.v|
+!s90 -reportprogress|300|../led_test.v|
+vled_test_tb
+IRkbf9`zzgjoDL9iPMZDXW2
+ViJ]K<XJJjdnLO;MV]A>NX1
+R1
+w1500957175
+8led_test_tb.v
+Fled_test_tb.v
+L0 2
+R2
+r1
+31
+R3
+!s100 3W<A9A9;RZEoNd_S_C2zH2
+!s108 1503491568.517000
+!s107 led_test_tb.v|
+!s90 -reportprogress|300|led_test_tb.v|
+!i10b 1
+!s85 0

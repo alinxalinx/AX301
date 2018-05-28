@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 20 15:36:53 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : lcd_char
+Top-level Entity Name : top
+Family : Cyclone IV E
+Total logic elements : 201
+    Total combinational functions : 161
+    Dedicated logic registers : 127
+Total registers : 127
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 16,384
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

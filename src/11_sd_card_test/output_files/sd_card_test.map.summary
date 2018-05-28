@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 20 14:40:12 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : sd_card_test
+Top-level Entity Name : sd_card_test
+Family : Cyclone IV E
+Total logic elements : 1,942
+    Total combinational functions : 1,226
+    Dedicated logic registers : 1,365
+Total registers : 1365
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 112,640
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

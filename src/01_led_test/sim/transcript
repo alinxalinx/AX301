@@ -1,0 +1,34 @@
+# //  ModelSim SE-64 10.1c Jul 28 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do start.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module led_test_tb
+# 
+# Top level modules:
+# 	led_test_tb
+# Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module led_test
+# 
+# Top level modules:
+# 	led_test
+# vsim -voptargs=+acc work.led_test_tb 
+# Loading work.led_test_tb(fast)
+# Loading work.led_test(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Break key hit 
+# Break in Module led_test at ../led_test.v line 42
+# can't read "map(f)": no such element in array
+# WLF meta update error: 
+# Simulation Breakpoint: Break in Module led_test at ../led_test.v line 42
+# MACRO ./start.do PAUSED at line 17

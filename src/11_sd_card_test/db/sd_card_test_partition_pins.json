@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SD_nCS",
+					"strict" : false
+				},
+				{
+					"name" : "SD_DCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SD_MOSI",
+					"strict" : false
+				},
+				{
+					"name" : "seg_sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_sel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_sel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "SD_MISO",
+					"strict" : false
+				},
+				{
+					"name" : "key1",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

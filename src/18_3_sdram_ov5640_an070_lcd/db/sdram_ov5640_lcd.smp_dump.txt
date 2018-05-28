@@ -1,0 +1,78 @@
+
+State Machine - |top|sdram_core:sdram_core_m0|state
+Name state.S_TRFC state.S_AR state.S_TDAL state.S_WD state.S_WRITE state.S_RWAIT state.S_RD state.S_CL state.S_READ state.S_TRCD state.S_ACTIVE state.S_IDLE state.S_INIT_DONE state.S_INIT_TMRD state.S_INIT_MRS state.S_INIT_TRF2 state.S_INIT_AR2 state.S_INIT_TRF1 state.S_INIT_AR1 state.S_INIT_TRP state.S_INIT_PRE state.S_INIT_NOP 
+state.S_INIT_NOP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S_INIT_PRE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S_INIT_TRP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S_INIT_AR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S_INIT_TRF1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S_INIT_AR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S_INIT_TRF2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S_INIT_MRS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S_INIT_TMRD 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S_INIT_DONE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S_ACTIVE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRCD 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_READ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_CL 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RWAIT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WRITE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WD 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TDAL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_AR 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRFC 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|frame_read_write:frame_read_write_m0|frame_fifo_read:frame_fifo_read_m0|state
+Name state.S_END state.S_READ_BURST_END state.S_READ_BURST state.S_CHECK_FIFO state.S_ACK state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_ACK 0 0 0 0 1 1 
+state.S_CHECK_FIFO 0 0 0 1 0 1 
+state.S_READ_BURST 0 0 1 0 0 1 
+state.S_READ_BURST_END 0 1 0 0 0 1 
+state.S_END 1 0 0 0 0 1 
+
+State Machine - |top|frame_read_write:frame_read_write_m0|frame_fifo_write:frame_fifo_write_m0|state
+Name state.S_END state.S_WRITE_BURST_END state.S_WRITE_BURST state.S_CHECK_FIFO state.S_ACK state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_ACK 0 0 0 0 1 1 
+state.S_CHECK_FIFO 0 0 0 1 0 1 
+state.S_WRITE_BURST 0 0 1 0 0 1 
+state.S_WRITE_BURST_END 0 1 0 0 0 1 
+state.S_END 1 0 0 0 0 1 
+
+State Machine - |top|i2c_config:i2c_config_m0|state
+Name state.S_WR_I2C_DONE state.S_WR_I2C state.S_WR_I2C_CHECK state.S_IDLE 
+state.S_IDLE 0 0 0 0 
+state.S_WR_I2C_CHECK 0 0 1 1 
+state.S_WR_I2C 0 1 0 1 
+state.S_WR_I2C_DONE 1 0 0 1 
+
+State Machine - |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|state
+Name state.S_RD_ACK state.S_RD_REG_ADDR1 state.S_WR_REG_ADDR1 state.S_WAIT state.S_WR_STOP state.S_RD_STOP state.S_RD_DATA state.S_RD_DEV_ADDR1 state.S_RD_REG_ADDR state.S_RD_DEV_ADDR0 state.S_WR_ERR_NACK state.S_WR_ACK state.S_WR_DATA state.S_WR_REG_ADDR state.S_WR_DEV_ADDR state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S_WR_DEV_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S_WR_REG_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S_WR_DATA 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S_WR_ACK 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S_WR_ERR_NACK 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S_RD_DEV_ADDR0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S_RD_REG_ADDR 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S_RD_DEV_ADDR1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S_RD_DATA 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S_RD_STOP 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S_WR_STOP 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WR_REG_ADDR1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD_REG_ADDR1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD_ACK 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|i2c_config:i2c_config_m0|i2c_master_top:i2c_master_top_m0|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
