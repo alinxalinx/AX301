@@ -1,4 +1,4 @@
-## Development board model: 
+﻿## Development board model: 
 * AX301
 
 ## The software version:
@@ -46,4 +46,5 @@
 * OV5640 Camera SOBEL Edge Detection
 * AD9226 module data acquisition waveform display in VGA
 * AD706 module data acquisition waveform display in VGA
+* ADDA module generates a sine wave and captures waveforms on the VGA display
 * ADDA module generates a sine wave and captures waveforms on the VGA display
